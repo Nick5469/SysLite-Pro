@@ -1,0 +1,2578 @@
+[新版JSON组件库]
+MSGTYPE: 0-绿色  1-蓝色,提示图标  2-橙色,警告图标  3-红色,严重警告
+COMPINFOLNK: 0-未知  1-程序  2-服务  3-注册项
+FILESPATH: 正常相对路径
+SYSFILESPATH: 在sys32(mui)/sys64(mui)/SxS目录中的相对路径
+X64: 如果不移除X86, 不删除WINDOWS目录下的目录
+X86: 如果不移除X64, 不删除WINDOWS目录下的目录
+组件中带"#"标识代表需要查找(Where /R)
+
+[bck]
+组件 - 远程桌面
+组件 - 语言 (Windows\Boot、Boot\)
+组件 - CAB文件查看 (cabview.dll)
+组件 - Windows图像采集? (wiaacmgr.exe)
+部分组件可能缺少pgk (Windows\servicing\Packages\)
+rasdiag.dll
+
+
+[文档]
+Device Stage https://learn.microsoft.com/zh-cn/windows-hardware/drivers/print/what-is-device-stage-
+
+
+[组件分组]
+1=Windows Apps
+2=Windows Apps - 系统应用
+3=Windows Apps - Metro 应用
+4=多媒体
+5=本地化
+6=本地化 - 语言
+7=用户
+8=系统
+9=系统 - 支持
+10=系统 - 控制面板(32位)
+11=系统 - 控制面板(64位)
+12=系统 - MMC功能模块(32位)
+13=系统 - MMC功能模块(64位)
+14=系统 - 组策略(64位)
+15=系统 - Recovery
+16=系统 - 轻松访问
+17=系统 - 富文本编辑控制(32位)
+18=系统 - 富文本编辑控制(64位)
+19=系统 - 命令(32位)
+20=系统 - 命令(64位)
+21=系统 - 工具(32位)
+22=系统 - 工具(64位)
+23=系统 - Windows Management Instrumentation(规范)
+24=网络
+25=远程控制与隐私
+26=驱动程序
+30=其他
+
+[组件列表]
+[1] Appx 部署服务
+ , 当用户初次登录到这台电脑和添加新应用时, 使应用进入就绪可用的状态. (Appx Deployment Service)
+ , 2
+ , @sys-AppxSysprep.dll / @sys-AppReadiness.dll / Windows\AppReadiness / @sys-AppXDeploymentServer.dll / @sys-CustomInstallExec.exe / @sys-AppXDeploymentExtensions.onecore.dll / @sys-AppXDeploymentExtensions.desktop.dll / @sys-AppXApplicabilityBlob.dll / @sys-settings.dat
+;
+[1] DevQuery Background Discovery Broker
+ , 使应用能够具有后台任务的设备
+ , 2
+ , @sys-DevQueryBroker.dll
+;
+[1] Browser Brokers(浏览器代理)
+ , 可以帮助应用更安全的访问可访问的内容
+ , 2
+ , @sys-browser_broker.exe / @sys-browserbroker.dll / @sys-browserexport.exe / @sys-eShims.dll
+;
+[1] Data Sharing Service(数据共享服务)
+ , 提供应用程序之间的数据代理
+ , 2
+ , @sys-dssvc.dll / @sys-dstokenclean.exe / @sys-dsclient.dll
+;
+[1] OneCore UAP Common Proxy Stub(32-位)
+ , 汇集了各种Windows API 访问点. 各种从应用程序中出发的链接调用.
+ , 2
+ , @sys-ShareHost.dll / @sys-WwaApi.dll / @sys-WwaExt.dll / @sys-WWAHost.exe / @sys-AppxAllUserStore.dll / @sys-AppxProvisioning.xml / @sys-ByteCodeGenerator.exe / @sys-AppXDeploymentClient.dll / @sys-WindowsPowerShell\v1.0\Modules\Appx / @sys-AppxSip.dll / @sys-AppxPackaging.dll / @sys-Windows.UI.Xaml.dll / @sys-Windows.Internal.SecurityMitigationsBroker.dll / @sys-Windows.UI.Xaml.Controls.dll / @sys-AppContracts.dll / @sys-AppExtension.dll / @sys-Windows.ApplicationModel.Background.SystemEventsBroker.dll / @sys-SystemEventsBrokerClient.dll / @sys-Windows.ApplicationModel.Background.TimeBroker.dll / @sys-ClipboardServer.dll / @sys-Windows.ApplicationModel.Core.dll / @sys-Windows.ApplicationModel.dll / @sys-Windows.StateRepository.dll / @sys-Windows.StateRepositoryPS.dll / @sys-Windows.StateRepositoryBroker.dll / @sys-Windows.StateRepositoryClient.dll / @sys-Windows.StateRepositoryCore.dll / @sys-Windows.StateRepositoryUpgrade.dll / @sys-StateRepository.Core.dll / @sys-WindowsPowerShell\v1.0\Modules\Appx / @sys-OneCoreUAPCommonProxyStub.dll
+;
+[1] Windows Web App (WWA) 宿主
+ , Internet-based App 渲染平台.
+ , 3
+ , @sys-WwaApi.dll / @sys-WwaExt.dll / @sys-WWAHost.exe
+;
+[1] Skype ORTC
+ , 
+ , 0
+ , @sys-ortcengine.dll / @sys-rtmcodecs.dll / @sys-rtmmvrortc.dll / @sys-rtmpal.dll / @sys-rtmpltfm.dll
+;
+[1] Webcam Experience(网络摄像头体验)
+ , 
+ , 2
+ , @sys-WebcamUi.dll / @sys-CameraSettingsUIHost.exe
+;
+[1] 地图控制
+ , Windows 地图依赖于此功能
+ , 1
+ , @sys-ztrace_maps.dll / @sys-Geocommon.dll / Windows\System32\migration\MapsMigPlugin.dll / Windows\PolicyDefinitions\zh-CN\WinMaps.adml / @sys-JpMapControl.dll / @sys-BingMaps.dll / Windows\SystemResources\BingMaps.dll.mun / @sys-BingOnlineServices.dll / @sys-MapConfiguration.dll / @sys-MapControlCore.dll / @sys-MapControlStringsRes.dll / @sys-Microsoft-Windows-MapControls.dll / @sys-MosHostClient.dll / @sys-moshost.dll / @sys-moshostcore.dll / @sys-MosStorage.dll / @sys-MapsBtSvc.dll / @sys-MapsBtSvcProxy.dll / @sys-Microsoft-Windows-MosHost.dll / @sys-MapsStore.dll / @sys-mapsupdatetask.dll / @sys-NmaDirect.dll / @sys-mapstoasttask.dll / @sys-MapsCSP.dll / @sys-MapRouter.dll / @sys-MapGeocoder.dll / Windows\PolicyDefinitions\WinMaps.admx / ProgramData\Microsoft\MapData / @sys-SettingsHandlers_Maps.dll
+;
+[1] 设置同步
+ , 可以设置在安装 Windows 的PC 和设备之间进行同步, 使得在不同机器上都可以保持相同的使用体验变得比较容易.
+ , 2
+ , @sys-BrowserSettingSync.dll / @sys-SettingMonitor.dll / @sys-AzureSettingSyncProvider.dll / @sys-OneDriveSettingSyncProvider.dll / @sys-SettingSyncDownloadHelper.dll / @sys-SettingSyncHost.exe / @sys-SettingSync.dll / @sys-SyncSettings.dll / Windows\Logs\SettingSync
+;
+[1] 零售演示内容
+ , 供零售商展示Windows设备的演示内容.
+ , 1
+ , ProgramData\Microsoft\Windows\RetailDemo / @sys-Windows.System.Profile.RetailInfo.dll / @sys-RDXService.dll / @sys-RDXTaskFactory.dll
+;
+[1] 已移除的应用
+ , 系统自带的Metro应用, 被移除后的备份安装包.
+ , 2
+ , Program Files\WindowsApps\MovedPackages
+;
+
+
+
+[2] Cortana
+ , 小娜, 微软语音助手. 任务托盘/开始菜单搜索和设置的搜索功能.
+ , 1
+ , Windows\SystemApps\Microsoft.Windows.Cortana_* / Users\Default\AppData\Local\Packages\Microsoft.Windows.Cortana_* / ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.Cortana_* / ProgramData\Microsoft\Windows\AppRepository Microsoft.Windows.Cortana_*
+;
+[2] OOBE
+ , 控制系统安装的最终输段, 提示设定用户选项和系统安装的最终究成, 当然在系统封续部署时的Generalize 部分也会引用这部分设置. 仅在安装过程中便用究全无人值守并不连接网路时才可以移除.
+ , 3
+ , Windows\System32\oobe / Windows\SystemApps\Microsoft.Windows.CloudExperienceHost_* / @sys-autopilot.dll / @sys-Windows.Management.Service.dll / @sys-WindowsManagementServiceWinRt.ProxyStub.dll / @sys-aadtb.dll / Users\Default\AppData\Local\Packages\Microsoft.Windows.CloudExperienceHost_* / ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.CloudExperienceHost_* / ProgramData\Microsoft\Windows\AppRepository Microsoft.Windows.CloudExperienceHost_*
+;
+[2] PrintDialog
+ , 
+ , 0
+ , Users\Default\AppData\Local\Packages\Windows.PrintDialog_* / ProgramData\Microsoft\Windows\AppRepository\Packages\Windows.PrintDialog_* / ProgramData\Microsoft\Windows\AppRepository Windows.PrintDialog_*
+;
+[2] SecondaryTileExperience
+ , 
+ , 2
+ , Windows\SystemApps\Microsoft.Windows.SecondaryTileExperience_* / Users\Default\AppData\Local\Packages\Microsoft.Windows.SecondaryTileExperience_* / ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.SecondaryTileExperience_* / ProgramData\Microsoft\Windows\AppRepository Microsoft.Windows.SecondaryTileExperience_*
+;
+[2] Shell Experience Host
+ , 处理任务栏弹出窗口的界面行为, 如日历或时钟、开始菜单透明度、背景行为等.
+ , 3
+ , windows\systemapps\ShellExperienceHost_* / Windows\SystemApps\Microsoft.Windows.StartMenuExperienceHost_* / Users\defaultuser0\AppData\Roaming\Microsoft\Windows\Start Menu / Users\Default\AppData\Local\Packages\Microsoft.Windows.ShellExperienceHost_* / ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.ShellExperienceHost_* / ProgramData\Microsoft\Windows\AppRepository Microsoft.Windows.ShellExperienceHost_*
+;
+[2] SmartScreen
+ , SmartScreen 筛选器通过在运行从 lnternet下载的未识别应用和文件之前向用户发出警告, 从而保护用户的安全.
+ , 1
+ , @sys-smartscreen.exe / @sys-smartscreenps.dll / @sys-SmartScreenSettings.exe / Windows\SystemApps\Microsoft.Windows.AppRep.ChxApp_* / Users\Default\AppData\Local\Packages\Microsoft.Windows.Apprep.ChxApp_* / ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.Apprep.ChxApp_* / ProgramData\Microsoft\Windows\AppRepository Microsoft.Windows.Apprep.ChxApp_*
+;
+[2] Windows Hello
+ , 
+ , 1
+ , Windows\SystemApps\Microsoft.BioEnrollment_* / Users\Default\AppData\Local\Packages\Microsoft.BioEnrollment_* / ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.BioEnrollment_* / ProgramData\Microsoft\Windows\AppRepository Microsoft.BioEnrollment_*
+;
+[2] Windows 默认锁屏界面
+ , 
+ , 2
+ , Windows\SystemApps\Microsoft.LockApp_* / CUsers\Default\AppData\Local\Packages\Microsoft.LockApp_* / ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.LockApp_* / ProgramData\Microsoft\Windows\AppRepository Microsoft.LockApp_*
+;
+[2] Wireless Display Media Viewer 
+ , 
+ , 1
+ , Users\Default\AppData\Local\Packages\Windows.MiracastView_* / ProgramData\Microsoft\Windows\AppRepository\Packages\Windows.MiracastView_* / ProgramData\Microsoft\Windows\AppRepository Windows.MiracastView_*
+;
+[2] Windows Search
+ , Windows搜索
+ , 2
+ , @sys-SearchIndexer.exe / @sys-SearchProtocolHost.exe / @sys-SearchFolder.dll / @sys-Search.ProtocolHandler.MAPI2.dll / Windows\SystemApps\Microsoft.Windows.Search_*
+;
+[2] Xbox Gmae UI
+ , 
+ , 2
+ , Windows\SystemApps\Microsoft.XboxGameCallableUI_* / Users\Default\AppData\Local\Packages\Microsoft.XboxGameCallableUI_* / ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.XboxGameCallableUI_* / ProgramData\Microsoft\Windows\AppRepository Microsoft.XboxGameCallableUI_*
+;
+[2] "指定访问锁定"应用
+ , 
+ , 0
+ , Windows\SystemApps\Microsoft.Windows.AssignedAccessLockApp_* / Users\Default\AppData\Local\Packages\Microsoft.Windows.AssignedAccessLockApp_* / ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.AssignedAccessLockApp_* / ProgramData\Microsoft\Windows\AppRepository Microsoft.Windows.AssignedAccessLockApp_*
+;
+[2] 工作或学校账户
+ , 
+ , 2
+ , Windows\SystemApps\Microsoft.AAD.BrokerPlugin_* / Users\Default\AppData\Local\Packages\Microsoft.AAD.BrokerPlugin_* / ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.AAD.BrokerPlugin_* / ProgramData\Microsoft\Windows\AppRepository Microsoft.AAD.BrokerPlugin_*
+;
+[2] 电子邮件和账户
+ , 
+ , 2
+ , Windows\SystemApps\Microsoft.AccountsControl_* / Users\Default\AppData\Local\Packages\Microsoft.AccountsControl_* / ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.AccountsControl_* / ProgramData\Microsoft\Windows\AppRepository Microsoft.AccountsControl_*
+;
+[2] 设置
+ , 更改设置并自定义如何使用你的计算机(系统安装与开始菜单都依赖于"设置", 移除后可能会存在兼容性问题)
+ , 3
+ , windows\ImmersiveControlPanel / Users\defaultuser0\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\System Tools\设备.lnk / Users\defaultuser0\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\System Tools\默认程序.lnk / @sys32-SystemSettingsAdminFlows.exe / Users\Default\AppData\Local\Packages\windows.immersivecontrolpanel_* / ProgramData\Microsoft\Windows\AppRepository\Packages\windows.immersivecontrolpanel_* / ProgramData\Microsoft\Windows\AppRepository windows.immersivecontrolpanel_*
+;
+[2] 激活客户端
+ , 激活Windows(移除后将无法激活系统).
+ , 2
+ , @sys-slui.exe / @sys-changepk.exe
+;
+[2] 剪贴板
+ , 当按下Win + V 键
+ , 1
+ , Windows\SystemApps\MicrosoftWindows.Client.CBS_*
+;
+[2] 开始
+ , 开始菜单
+ , 2
+ , Windows\SystemApps\Microsoft.Windows.StartMenuExperienceHost_*
+;
+[2] Microsoft.Windows.AppResolverUX
+ , Microsoft.Windows.AppResolverUX
+ , 4
+ , Windows\SystemApps\Microsoft.Windows.AppResolverUX_*
+;
+[2] microsoft.creddialoghost
+ , microsoft.creddialoghost
+ , 4
+ , Windows\SystemApps\microsoft.creddialoghost_*
+;
+[2] 安全评估浏览器
+ , Microsoft.Windows.SecureAssessmentBrowser
+ , 4
+ , Windows\SystemApps\Microsoft.Windows.SecureAssessmentBrowser_*
+;
+[2] UndockedDevKit
+ , MicrosoftWindows.UndockedDevKit
+ , 4
+ , Windows\SystemApps\MicrosoftWindows.UndockedDevKit_*
+;
+[2] 共享应用
+ , Shared
+ , 4
+ , Windows\SystemApps\Shared
+;
+
+
+
+[3] App Installer
+ , 应用程序管理. 包括WinGet
+ , 2
+ , Program Files\WindowsApps\Microsoft.DesktopAppInstaller_*
+;
+[3] Feedback Hub
+ , 反馈中心. 提供多种选项来提交反馈, 以帮助微软改进操作系统. 还提供了社区功能, 用户们可以讨论交流.
+ , 0
+ , Program Files\WindowsApps\Microsoft.WindowsFeedbackHub_*
+;
+[3] Get Help
+ , 获取帮助. 用户可以输入问题的关键字或简短描述, 系统会自动搜索相关帮助信息, 并提供相关建议和解决方案. 还可以链接到Windows支持和社区论坛.
+ , 0
+ , Program Files\WindowsApps\Microsoft.GetHelp_*
+;
+[3] Get Office
+ , 获取Office. 可以让用户轻松浏览Office365订阅计划, 快速安装Office, 并且了解Office的新功能与更新.
+ , 1
+ , Program Files\WindowsApps\Microsoft.MicrosoftOfficeHub_*
+;
+[3] Getstarted
+ , 提示(Win 1607之前叫"入门"). 为系统入门者提供的Windows 入门指引与提示.
+ , 1
+ , Program Files\WindowsApps\Microsoft.Getstarted_*
+;
+[3] Groove Music
+ , Groove 音乐. 音乐播放器, 为用户提供了一个集中管理音乐,搜索音乐和播放音乐的平台. 与Xbox音乐服务集成.
+ , 1
+ , Program Files\WindowsApps\Microsoft.ZuneMusic_*
+;
+[3] Mail and Calendar
+ , 邮件与日历. 管理用户的邮件和日程安排.
+ , 2
+ , Program Files\WindowsApps\microsoft.windowscommunicationsapps_*
+;
+[3] Microsoft Advertising SDK for XAML
+ , 应用程序广告平台开发包. 提供广告嵌入控件,API和分析工具, 帮助应用程序开发人员轻松地集成广告并实现最佳收益.
+ , 2
+ , Program Files\WindowsApps\Microsoft.Advertising.Xaml_*
+;
+[3] Microsoft Edge
+ , Egde浏览器.
+ , 1
+ , Program Files (x86)\Microsoft\Edge / Program Files (x86)\Microsoft\EdgeCore / Program Files (x86)\Microsoft\EdgeUpdate / Program Files (x86)\Microsoft\EdgeWebView / Windows\System32\edgeangle.dll / Windows\System32\edgecontent.dll / Windows\System32\edgehtml.dll / Windows\System32\edgeiso.dll / Windows\System32\edgemanager.dll / Windows\System32\MicrosoftEdgeBCHost.exe / Windows\System32\MicrosoftEdgeCP.exe / Windows\System32\MicrosoftEdgeDevTools.exe / Windows\System32\MicrosoftEdgeSH.exe / Program Files\WindowsApps\Microsoft.MicrosoftEdge_*
+;
+[3] Microsoft Engagement Framework
+ , 应用程序运营商框架. 用于创建与用户有效互动和促进用户参与的应用程序. 该组件需要Microsoft 云服务. Microsoft Store需要此组件.
+ , 1
+ , Program Files\WindowsApps\Microsoft.Services.Store.Engagement_*
+;
+[3] Microsoft Messaging
+ , 消息. 可以帮助开发人员轻松构建和集成短信,彩信和聊天功能到他们的应用程序中.
+ , 0
+ , Program Files\WindowsApps\Microsoft.Messaging_*
+;
+[3] Microsoft People
+ , 人脉. 帮助用户轻松管理和访问联系人信息, 同事也为开发人员提供了一套API, 以便他们可以在他们的应用程序中集成联系人管理和访问功能.
+ , 1
+ , @sys-PeopleBand.dll / @sys-PeopleAPIs.dll / Program Files\WindowsApps\Microsoft.People_*
+;
+[3] Microsoft Photos
+ , 照片. 帮助用户轻松预览,管理,编辑照片和视频. 也为开发人员提供了一套API, 以便他们在他们的应用程序中集成图像处理和管理功能.
+ , 2
+ , Program Files\WindowsApps\Microsoft.Windows.Photos_*
+;
+[3] Microsoft Solitaire Collection
+ , 微软纸牌游戏. 包含Klondike,FreeCell,Spider.TriPeaks等多种不同类型的纸牌游戏.
+ , 2
+ , Program Files\WindowsApps\Microsoft.MicrosoftSolitaireCollection_*
+;
+[3] Microsoft Sticky Notes
+ , 便签. 可以帮助用户在桌面上记录和管理各种个人和工作事务.
+ , 2
+ , Program Files\WindowsApps\Microsoft.MicrosoftSolitaireCollection_*
+;
+[3] Microsoft Movies & TV
+ , 多媒体. 可以播放,订阅和购买音乐和视频.
+ , 0
+ , Program Files\WindowsApps\Microsoft.ZuneVideo_*
+;
+[3] Mobile Plans(OneConnect)
+ , 移动计划. 通过eSIM和计划进行联系而实现的短信发送,电话拨打功能.
+ , 0
+ , Program Files\WindowsApps\Microsoft.OneConnect_*
+;
+[3] Microsoft Network 天气
+ , 实时天气. 提供天气信息,天气预警,空气质量等功能.
+ , 0
+ , Program Files\WindowsAppsMicrosoft.BingWeather_*
+;
+[3] OneNote
+ , 微软笔记. 跨平台笔记记录和协助工具, 支持云同步和多设备.
+ , 1
+ , Program Files\WindowsApps\Microsoft.Office.OneNote_*
+;
+[3] Paint 3D
+ , 图画 3D. 简易的图片编辑与绘制工具.
+ , 2
+ , Program Files\WindowsApps\Microsoft.MSPaint_*
+;
+[3] Skype
+ , Skype聊天软件. 全球性的语音,视频和即时消息通讯工具.
+ , 2
+ , @sys-ortcengine.dll / Program Files\WindowsApps\Microsoft.SkypeApp_*
+;
+[3] Store Purchase App
+ , 商店购买程序. 该组件运行用户通过商店购买和下载应用程序与游戏.
+ , 2
+ , Program Files\WindowsApps\Microsoft.StorePurchaseApp_*
+;
+[3] Wallet
+ , 电子钱包. 帮助用户高效的管理和保护电子钱包信息.
+ , 1
+ , Program Files\WindowsApps\Microsoft.Wallet_*
+;
+[3] Windows Alarms & Clock
+ , 警报 & 闹钟. 提供时钟模块,闹钟,计时器,世界时钟,秒表和日期等多个时间模块功能.
+ , 2
+ , Program Files\WindowsApps\Microsoft.WindowsAlarms_*
+;
+[3] Windows Calculator
+ , 计算器. 提供标准,科学和程序员计算器模式, 可以完成基本的数学运算以及单位转换等计算任务.
+ , 1
+ , Program Files\WindowsApps\Microsoft.WindowsCalculator_*
+;
+[3] Windows Camera
+ , 录像. 可进行拍照,录像和视频聊天等功能.
+ , 2
+ , Program Files\WindowsApps\Microsoft.WindowsCamera_*
+;
+[3] Windows Maps
+ , 地图. 集成了Bing地图的功能, 并提供导航,搜索,实时路况等功能. 也支持离线地图.
+ , 1
+ , Program Files\WindowsApps\Microsoft.WindowsMaps_*
+;
+[3] Windows Reader (PDF)
+ , Windows PDF 文件查看器
+ , 2
+ , @sys-Windows.Data.Pdf.dll / Windows\SystemResources\Windows.Data.Pdf.dll.mun
+;
+[3] Windows Store
+ , Windows 商店. 用户可以搜索,购买,下载,安装各种Windows应用与第三方应用.
+ , 2
+ , Program Files\WindowsApps\Microsoft.Services.Store* / Program Files\WindowsApps\DeletedAllUserPackages\Microsoft.WindowsStore_* / Windows\System32\StoreAgent.dll / Windows\syswow64\StoreAgent.dll / Windows\system32\zh-cn\StoreAgent.dll.mui / Windows\syswow64\zh-cn\StoreAgent.dll.mui / Program Files\WindowsApps\Microsoft.WindowsStore_* / @sys-WSCollect.exe / @sys-WSReset.exe / Windows\diagnostics\system\Apps\RS_WSReset.ps1 / Windows\diagnostics\system\Apps\RC_WSReset.ps1 / Windows\diagnostics\system\Apps\VF_WSReset.ps1
+;
+[3] Windows View 3D
+ , 3D查看器. 支持3D模型查看,编辑等.
+ , 1
+ , Program Files\WindowsApps\Microsoft.Microsoft3DViewer_*
+;
+[3] Windows Voice Recorder
+ , 录音. 可以录制声音,音乐,会议,讲座等内容, 支持多种录音格式与音质选择. 还有简单的编辑和降噪功能.
+ , 1
+ , Program Files\WindowsApps\Microsoft.WindowsSoundRecorder_*
+;
+[3] Xbox Game Bar(游戏资源管理器)
+ , 游戏增强软件. 可以让用户方便的访问并管理游戏. 按WIN + G即可打开面板.
+ , 2
+ , Users\Default\AppData\Local\Microsoft\Windows\GameExplorer / ProgramData\Microsoft\Windows\GameExplorer / Users\Default\Saved Games / Windows\System32\gameux.dll / Windows\SysWOW64\gameux.dll / Program Files\WindowsApps\Microsoft.XboxGameOverlay_*
+;
+[3] Xbox Game Speech
+ , 游戏语音窗口. Xbox Game Bar子组件, 可以管理游戏中的语音交流和聊天.
+ , 2
+ , Microsoft.XboxSpeechToTextOverlay_*
+;
+[3] Xbox Identity Provider
+ , Xbox 身份验证. 允许用户使用Xbox Live 登录并进行游戏. 提供存档,成就等功能.
+ , 2
+ , Program Files\WindowsApps\Microsoft.XboxIdentityProvider_*
+;
+[3] Xbox TCUI
+ , Xbox 用户界面组件. 能使用户更轻松地使用Xbox 上的游戏和应用程序, 也为开发者提供了更多的灵活性.
+ , 2
+ , Program Files\WindowsApps\Microsoft.Xbox.TCUI_*
+;
+[3] Xbox
+ , Xbox 游戏. 提供Xbox 平台的功能.
+ , 1
+ , Program Files\WindowsApps\Microsoft.XboxApp_*
+;
+
+
+
+[4] Intel Indeo 编码器
+ , 包含 Indeo 4.5 和 5.1. 此组件已经过时且包含某些漏洞, 已被微软弃用.
+ , 2
+ , @sys-ir41_32original.dll / @sys-ir41_32.ax / @sys-ir41_qcoriginal.dll / @sys-ir50_32original.dll / @sys-ir41_qc.dll / @sys-ir41_qcxoriginal.dll / @sys-ir41_qcx.dll / @sys-ir50_32.dll / @sys-ir50_qcoriginal.dll / @sys-ir50_qc.dll / @sys-ir50_qcxoriginal.dll / @sys-ir50_qcx.dll / @sys-iac25_32.ax / @sys-ivfsrc.ax
+;
+[4] MPEG-2 分离器
+ , Windows 内置的 MPEG-2 (H.222/H.262) 内容支持. 已经内置此编码的播放器无需此组件.
+ , 2
+ , @sys-bdaplgin.ax / @sys-WSTPager.ax / @sys-VBICodec.ax / @sys-cca.dll / @sys-Mpeg2Data.ax / @sys-MSDvbNP.ax / @sys-MSNP.ax / @sys-psisdecd.dll / @sys-psisrndr.ax / @sys-MSVidCtl.dll / @sys-spwinsat.dll / @sys-WinSATAPI.dll / @sys-WinSAT.exe / @sys-mpg2splt.ax / Windows\Performance / Windows\System32\wbem\Winsat.mof / Windows\System32\wbem\WinsatUninstall.mof
+;
+[4] Now Playing Session Manager
+ , 
+ , 2
+ , @sys-NPSMDesktopProvider.dll / Windows\SystemResources\NPSMDesktopProvider.dll.mun / @sys-NPSM.dl
+;
+[4] OpenGL API
+ , OpenGL 3D 图形引擎 API.
+ , 3
+ , @sys-glmf32.dll / @sys-glu32.dll / @sys-opengl32.dll
+;
+[4] PlayReady
+ , 微软的 PlayReady 是一套工具集, 可以阻止未授权使用或拷贝数字内容, 保证媒体供应商在互联网上更安全的发布其数字内容.
+ , 3
+ , @sys-prproc.exe / @sys-Windows.Media.Protection.PlayReady.dll
+;
+[4] Speech API
+ , 语音识别
+ , 2
+ , Windows\System32\Speech_OneCore / Windows\Speech_OneCore / Windows\SysWOW64\Speech_OneCore / Windows\System32\Speech / Windows\Speech / Windows\IME\zh-CN\SpTip.dll.mui / Windows\Media\Speech On.wav / Windows\Media\Speech Off.wav / Windows\Media\Speech Sleep.wav / Windows\Media\Speech Misrecognition.wav / Windows\Media\Speech Disambiguation.wav / ProgramData\Microsoft\Windows\Start Menu\Programs\Accessibility\Speech Recognition.lnk / Windows\SysWOW64\Speech / Windows\IME\SPTIP.DLL / Windows\PolicyDefinitions\zh-CN\Speech.adml / Windows\PolicyDefinitions\Speech.admx / Windows\diagnostics\system\Speech / Windows\diagnostics\index\SpeechDiagnostic.xml / @sys-MsftOemDllIgneous.dll / @sys-Windows.Media.Speech.dll / ProgramData\Microsoft\Windows\Start Menu\Programs\Accessibility / Windows\IME\en-US / Windows\IME\zh-CN / @sys-MSTTSEngine_OneCore.dll / @sys-MSTTSLoc_OneCore.dll / @sys-MSTTSLocEnUS.dat / @sys-MSTTSEngine.dll / @sys-MSTTSLoc.dll / @sys-M1033ZIR.APM / @sys-M1033ZIR.INI / @sys-M1033ZIR.Keyboard.NUS / @sys-M2052Hongyu.APM / @sys-M2052Hongyu.bep / @sys-M2052Hongyu.cmp / @sys-M2052Hongyu.EnUS.apm / @sys-M2052Hongyu.EnUS.INI / @sys-M2052Hongyu.INI / @sys-M2052Hongyu.tbtdirection.TNU / @sys-M2052Hongyu.tbtdirection.unt / @sys-M2052Hongyu.tbtdirection.WIH / @sys-M2052Yaoyao.TBT.NUS / @sys-M2052Hongyu.tbtdirection.WVE / @sys-M2052Hongyu.voiceAssistant.TNU / @sys-M2052Hongyu.voiceAssistant.unt / @sys-M2052Hongyu.voiceAssistant.WIH / @sys-M2052Hongyu.voiceAssistant.WVE / @sys-M2052Hongyu.zhCN.voiceAssistant.BR2 / @sys-M2052Huihui.apm / @sys-M2052Huihui.EnUS.apm / @sys-M2052Huihui.ini / @sys-M2052Huihui.keyboard.NUS / @sys-M2052Kangkang.APM / @sys-M2052Kangkang.BEP / @sys-M2052Kangkang.EnUS.APM / @sys-M2052Kangkang.EnUS.BEP / @sys-M2052Kangkang.EnUS.INI / @sys-M2052Kangkang.EnUS.keyboard.NU2 / @sys-M2052Kangkang.EnUS.keyboard.RAD / @sys-M2052Kangkang.EnUS.keyboard.unt / @sys-M2052Kangkang.EnUS.keyboard.WIH / @sys-M2052Kangkang.EnUS.keyboard.WVE / @sys-M2052Kangkang.INI / @sys-M2052Kangkang.keyboard.NU2 / @sys-M2052Kangkang.keyboard.RAD / @sys-M2052Kangkang.keyboard.unt / @sys-M2052Kangkang.keyboard.WIH / @sys-M2052Kangkang.keyboard.WVE / @sys-M2052Kangkang.TBT.NUS / @sys-M2052Yaoyao.APM / @sys-M2052Yaoyao.EnUS.APM / @sys-M2052Yaoyao.EnUS.INI / @sys-M2052Yaoyao.INI / @sys-MSTTSLocZhCN.dat / @sys-MSTTSLocZhCN.INI / @sys-tokens_TTS_zh-CN.xml / @sys-tokens_TTS_zh-CN_huihui.xml / @sys-ZhCN.Address.dat / @sys-ZhCN.Message.dat / @sys-ZhCN.Name.dat / @sys-sapi.dll / @sys-DictationManager.dll / @sys-SpeechBrokeredApi.dll / @sys-SpeechRuntime.exe / @sys-SpeechServiceWinRTApi.ProxyStub.dll / @sys-privacy-icon.png / @sys-toast-hero-image.png / @sys-SettingsHandlers_SpeechPrivacy.dll / @sys-Windows.Speech.Pal.Desktop.dll / @sys-Windows.Speech.Dictation.dll / @sys-Windows.Speech.Shell.dll / @sys-sapi.cpl.mui / @sys-sapi.cpl / @sys-SpeechUXRes.dll / @sys-SpeechUX.dll.mui / @sys-speechuxcpl.dll.mui / @sys-SpeechUXWiz.exe.mui / @sys-SpTip.dll.mui / @sys-SpeechUX.dll / @sys-speechuxcpl.dll / @sys-SPTIP.DLL / @sys-Speech Disambiguation.wav / @sys-Speech Misrecognition.wav / @sys-Speech Off.wav / @sys-Speech On.wav / @sys-Speech Recognition.lnk / @sys-Speech Sleep.wav / @sys-SpeechUXPS.DLL / @sys-SpeechUXWiz.exe / @sys-Speech.adml / @sys-Speech.admx / @sys-tokens.xml / @sys-sapi_onecore.dll / @sys-SpeechModelDownload.exe / @sys-sapi.dll.mui / @sys-sapisvr.exe.mui / @sys-sapisvr.exe / @sys-CL_LocalizationData.psd1 / @sys-DiagPackage.dll.mui / @sys-VF_CalibrationRequired.ps1 / @sys-CL_Utilities.ps1 / @sys-DiagPackage.diagpkg / @sys-DiagPackage.dll / @sys-MF_SpeechDiagnostic.ps1 / @sys-RS_CalibrationRequired.ps1 / @sys-SpeechDiagnostic.xml / @sys-SpeechDiagnosticUtil.dll / @sys-spsreng_onecore.dll / @sys-spsrx_onecore.dll / @sys-srloc.dll.mui / @sys-spsreng.dll / @sys-spsrx.dll / @sys-srloc.dll / @sys-AI042052.am / @sys-c2052.fe / @sys-DictationCommands.0804.grxml / @sys-l2052.cw / @sys-l2052.ini / @sys-l2052.phn / @sys-l2052.smp / @sys-l2052.wwd / @sys-lsr2052.lxa / @sys-r2052sr.lxa / @sys-tn2052.bin / @sys-Tokens_SR_zh-CN-N.xml / @sys-VES-Disambiguation.0804.grxml / @sys-VES-SeeItSayIt.0804.grxml / @sys-VES-Select.0804.grxml / @sys-af032052.am / @sys-ai032052.am / @sys-am032052.am / @sys-c2052dsk.fe / @sys-grph2052.lxa / @sys-l2052.dlm / @sys-l2052.mllr / @sys-l2052.ngr / @sys-p2052.dlm / @sys-p2052.ngr / @sys-wp2052.bin / @sys-MsftOemDllIgneous.dll / @sys-sidubm.table / @sys-Tokens_VoiceActivation_zh-CN.xml / @sys-VoiceActivation_HW_zh-CN.dat / @sys-VoiceActivation_zh-CN.dat / @sys-Windows.Media.Speech.dll
+;
+[4] Windows TIFF IFilter(光学字符识别 OCR )
+ , 可以基于文本内容搜索标记图像文件格式 (TIFF) 文档. 可供索引服务(桌面搜索).
+ , 1
+ , Windows\PolicyDefinitions\zh-CN\SearchOCR.adml / @sys-Windows.Media.Ocr.dll / Windows\OCR / Program Files (x86)\Common Files\Microsoft Shared\Filters / @sys-MsOcrRes.orp / @sys-SearchOCR.adml / @sys-SearchOCR.admx / @sys-tifffilt.dll / @sys-Windows.Media.Ocr.dll
+;
+[4] Windows 个性化主题
+ , 包含其他个性化主题, 默认外观会被保留.
+ , 2
+ , Windows\Resources\Themes\Light.theme / Windows\Resources\Themes\theme1.theme / Windows\Resources\Themes\theme2.theme / #Light.theme / #theme1.theme / #theme2.theme
+;
+[4] Windows 光盘映像刻录工具
+ , 资源管理器内置的 ISO 烧录功能.
+ , 1
+ , @sys-isoburn.exe
+;
+[4] 优质 Windows 音频视频体验 (qWave)
+ , 用于 IP 家庭网络上的音频视频(AV)流应用程序的网络平台. 通过确保 AV 应用程序的网络质量(QoS), qWave 增强了 AV 流的性能和可靠性.
+ , 2
+ , Windows\System32\drivers\zh-CN\qwavedrv.sys.mui / @sys-qwave.dll / Windows\System32\drivers\qwavedrv.sys / @sys-qwavedrv.sys
+;
+[4] 功能访问(Capability Access)
+ , 
+ , 2
+ , @sys-CapabilityAccessHandlers.dll / @sys-CapabilityAccessManager.dll / @sys-CapabilityAccessManagerClient.dll / @sys-SettingsHandlers_CapabilityAccess.dll
+;
+[4] 壁纸
+ , 除img0.jpg(默认)外
+ , 0
+ , Windows\Web\4k / Windows\Web\Wallpaper\windows 10 / Windows\Web\Wallpaper\鲜花
+;
+[4] 壁纸II
+ , 所有Windows自带壁纸
+ , 1
+ , Windows\Web
+;
+[4] 无用图片
+ , 存在于System32目录下的@...图片
+ , 0
+ , windows\system32\@AppHelpToast.png / windows\system32\@AudioToastIcon.png / windows\system32\@BackgroundAccessToastIcon.png / windows\system32\@bitlockertoastimage.png / windows\system32\@edptoastimage.png / windows\system32\@EnrollmentToastIcon.png / windows\system32\@language_notification_icon.png / windows\system32\@optionalfeatures.png / windows\system32\@VpnToastIcon.png / windows\system32\@WiFiNotificationIcon.png / windows\system32\@WindowsHelloFaceToastIcon.png / windows\system32\@windows-hello-V4.1.gif / windows\system32\@WindowsUpdateToastIcon.contrast-black.png / windows\system32\@WindowsUpdateToastIcon.contrast-white.png / windows\system32\@WirelessDisplayToast.png / windows\system32\@WwanNotificationIcon.png / windows\system32\@WwanSimLockIcon.png / Windows\System32\@WindowsUpdateToastIcon.png
+;
+[4] 鼠标指针
+ , Aero指针, 移除后将退回默认值(即无, 不会出现没有鼠标指针的情况)
+ , 1
+ , Windows\Cursors
+;
+[4] 开始菜单项目
+ , 开始菜单的文件以及文件夹, 一般里面都是快捷方式, 移除后 右键此电脑-管理 可能打不开
+ , 2
+ , ProgramData\Microsoft\Windows\Start Menu\Programs
+;
+[4] 声音
+ , 系统提示音
+ , 1
+ , Windows\media
+;
+[4] Windows Multimedia Platform
+ , 多媒体平台
+ , 1
+ , Program Files (x86)\Windows Multimedia Platform / Program Files\Windows Multimedia Platform
+;
+[4] Windows Sidebar
+ , 边栏小工具
+ , 4
+ , Program Files (x86)\Windows Sidebar / Program Files\Windows Sidebar
+;
+[4] 图像采集
+ , 图像采集界面
+ , 1
+ , Windows\twain_32.dll / Windows\zh-cn\twain_32.dll.mui
+;
+
+
+
+[5] 输入切换器
+ , Microsoft Windows 输入切换器
+ , 2
+ , @sys-InputSwitch.dll / @sys-InputService.dll
+;
+[5] 输入法编辑器(IME)
+ , 某些东亚语言的复杂字符支持需要此组件
+ , 2
+ , Windows\ime
+;
+[5] 语言清理准备
+ , Language Cleanup Sysprep action.
+ , 4
+ , @sys32-LangCleanupSysprepAction.dll
+;
+
+
+
+[6] 英语
+ , 英国国家所有语言 (US)
+ , 2
+ , Windows\en-us / Windows\Syswow64\en-us / Windows\System32\en-us / Windows\System32\en-gb / Windows\Syswow64\en-gb
+;
+[6] 繁体中文
+ , 汉语, 繁体中文 (ZH-tw)
+ , 1
+ , Windows\System32\zh-tw / Windows\Syswow64\zh-tw
+;
+[6] 简体中文
+ , 汉语, 简体中文, 注意: 如果默认是此语种, 移除后请在系统设置切换语种. (ZH-cn)
+ , 3
+ , Windows\Syswow64\zh-hans / Windows\System32\zh-hans / windows\zh-cn / Windows\Syswow64\zh-cn / Windows\System32\zh-cn
+;
+[6] 芬兰语
+ , 芬兰国家所有语言 (FI)
+ , 1
+ , Windows\System32\fi-fi / Windows\Syswow64\fi-fi
+;
+[6] 丹麦语
+ , 丹麦国家所有语言 (DK)
+ , 1
+ , Windows\System32\da-dk / Windows\Syswow64\da-dk
+;
+[6] 日语
+ , 日本国家所有语言 (JP)
+ , 1
+ , Windows\Syswow64\ja-jp / Windows\System32\ja-jp
+;
+[6] 荷兰语
+ , 荷兰国家所有语言 (NL)
+ , 1
+ , Windows\System32\nl-nl / Windows\Syswow64\nl-nl
+;
+[6] 葡萄牙语
+ , 葡萄牙国家所有语言 (PT)
+ , 1
+ , Windows\System32\pt-br / Windows\System32\pt-pt / Windows\Syswow64\pt-br / Windows\Syswow64\pt-pt
+;
+[6] 法语
+ , 法国国家所有语言 (FR)
+ , 1
+ , Windows\System32\fr-fr / Windows\System32\fr-ca / Windows\Syswow64\fr-fr / Windows\Syswow64\fr-ca
+;
+[6] 西班牙语
+ , 西班牙国家所有语言 (ES)
+ , 1
+ , Windows\System32\es-es / Windows\System32\es-mx / Windows\Syswow64\es-es / Windows\Syswow64\es-mx
+;
+[6] 德语
+ , 德国国家所有语言 (ED)
+ , 1
+ , Windows\System32\de-de / Windows\Syswow64\de-de
+;
+[6] 俄语
+ , 俄罗斯国家所有语言 (RU)
+ , 1
+ , Windows\System32\ru-ru / Windows\Syswow64\ru-ru
+;
+[6] 意大利语
+ , 意大利国家所有语言 (IT)
+ , 1
+ , Windows\System32\it-it / Windows\System32\it-lt / Windows\Syswow64\it-it / Windows\Syswow64\it-lt
+;
+[6] 希腊语
+ , 希腊国家所有语言 (GR)
+ , 1
+ , Windows\System32\el-gr / Windows\Syswow64\el-gr
+;
+[6] 挪威语
+ , 挪威国家所有语言 (NO)
+ , 1
+ , Windows\System32\nb-no / Windows\Syswow64\nb-no
+;
+[6] 匈牙利语
+ , 匈牙利国家所有语言 (HU)
+ , 1
+ , Windows\System32\hu-hu / Windows\Syswow64\hu-hu
+;
+[6] 土耳其语
+ , 国家所有语言 (TR)
+ , 1
+ , Windows\System32\tr-tr / Windows\Syswow64\tr-tr
+;
+[6] 捷克语
+ , 捷克共和国国家所有语言 (CZ)
+ , 1
+ , Windows\System32\cs-cz / Windows\Syswow64\cs-cz
+;
+[6] 斯洛文尼亚语
+ , 斯洛文尼亚国家所有语言 (SL)
+ , 1
+ , Windows\System32\sl-sl / Windows\Syswow64\sl-sl
+;
+[6] 波兰语
+ , 波兰国家所有语言 (PL)
+ , 1
+ , Windows\System32\pl-pl / Windows\Syswow64\pl-pl
+;
+[6] 瑞典语
+ , 瑞典国家所有语言 (SE)
+ , 1
+ , Windows\System32\sv-se / Windows\Syswow64\sv-se
+;
+[6] 阿拉伯语
+ , 阿拉伯国家所有语言 (AR)
+ , 1
+ , Windows\System32\ar-sa / Windows\Syswow64\ar-sa
+;
+[6] 保加利亚语
+ , 保加利亚国家所有语言 (BG)
+ , 1
+ , Windows\System32\bg-bg / Windows\Syswow64\bg-bg
+;
+[6] 爱沙尼亚语
+ , 爱沙尼亚国家所有语言 (ET)
+ , 1
+ , Windows\System32\et-ee / Windows\Syswow64\et-ee / Windows\System32\ti-et
+;
+[6] 以色列语
+ , 以色列国家所有语言 (HE)
+ , 1
+ , Windows\System32\he-lh / Windows\Syswow64\he-lh
+;
+[6] 克罗埃西亚语
+ , 克罗埃西亚国家所有语言 (HR)
+ , 1
+ , Windows\System32\hr-hr / Windows\Syswow64\hr-hr
+;
+[6] 拉脱维亚语
+ , 拉脱维亚国家所有语言 (LV)
+ , 1
+ , Windows\System32\lv-lv / Windows\Syswow64\lv-lv
+;
+[6] 罗马尼亚语
+ , 罗马尼亚国家所有语言 (RO)
+ , 1
+ , Windows\System32\ro-ro / Windows\Syswow64\ro-ro
+;
+[6] 马来西亚语
+ , 马来西亚国家所有语言 (MY)
+ , 1
+ , Windows\System32\my-mm / Windows\Syswow64\my-mm
+;
+[6] 斯洛文尼亚语
+ , 斯洛文尼亚国家所有语言 (SI)
+ , 1
+ , Windows\System32\si-lk / Windows\Syswow64\si-lk
+;
+[6] 斯洛伐克语
+ , 斯洛伐克国家所有语言 (SK)
+ , 1
+ , Windows\System32\sk-sk / Windows\Syswow64\sk-sk
+;
+[6] 印度语
+ , 印度国家所有语言 (IN)
+ , 1
+ , Windows\System32\ta-in / Windows\System32\ta-lk / Windows\Syswow64\ta-in / Windows\Syswow64\ta-lk / Windows\Syswow64\ti-et
+;
+[6] 泰语
+ , 泰国国家所有语言 (TH)
+ , 1
+ , Windows\System32\th-th / Windows\Syswow64\th-th
+;
+[6] 亚美尼亚语
+ , 亚美尼亚国家所有语言 (AM)
+ , 1
+ , Windows\System32\am-et / Windows\Syswow64\am-et
+;
+[6] 乌克兰语
+ , 国家所有语言 (UA)
+ , 1
+ , Windows\System32\uk-ua / Windows\Syswow64\uk-ua
+;
+
+
+
+[7] 临时文件
+ , 用户临时文件
+ , 1
+ , Users\Public\Appdata\local\temp
+;
+[7] 回收站
+ , 所有用户回收站中的文件, 删除后会自动重建, 用于保存删除文件数据.
+ , 1
+ , $Recycle.Bin
+;
+[7] 预读缓存
+ , 加快应用程序和操作系统的启动时间.
+ , 0
+ , Windows\Prefetch
+;
+
+[7] 自定义外观(桌面)
+ , 用于设置自定义文件夹的外观和行为
+ , 2
+ , Users\Public\Desktop\desktop.ini / Users\Default\Desktop\desktop.ini
+;
+
+
+
+[8] 桌面
+ , Explorer
+ , 3
+ , Windows\Explorer.exe
+;
+[8] Microsoft 管理控制台(MMC32位)
+ , 为系统管理员和高级用户提供一套设置和监控系统的界面.
+ , 2
+ , @sys64-mmc.exe
+;
+[8] Microsoft 管理控制台(MMC64位)
+ , 为系统管理员和高级用户提供一套设置和监控系统的界面.
+ , 3
+ , @sys32-mmc.exe / @sys32-CompMgmtLauncher.exe
+;
+[8] 注册表编辑器(32位)
+ , 注册表编辑器
+ , 1
+ , @sys64-regedt32.exe / @sys64-regedit.exe
+;
+[8] 注册表编辑器(64位)
+ , 注册表编辑器
+ , 3
+ , windows\regedit.exe / windows\zh-cn\regedit.exe.mui / @sys32-regedt32.exe / @sys32-regedit.exe
+;
+[8] Windows Defender
+ , 安全中心&系统保护. 注意, 目前工具箱没有系统优化功能, 而Defender的彻底移除是需要禁用注册表的(即优化). 若想彻底移除Defender, 请在目标映像添加Res目录里的注册表配置
+ , 3
+ , ProgramData\Microsoft\Windows Defender / Program Files\Windows Defender / Program Files\Windows Defender Advanced 3Threat Protection / Program Files (x86)\Windows Defender / @sys-SecurityHealthHost.exe / @sys-SecurityHealthProxyStub.dll / @sys-SecurityHealthSystray.exe / @sys-SecurityHealthAgent.dll / @sys-SecurityHealthSSO.dll / @sys-SecurityHealthService.exe / Windows\Security
+;
+[8] Internet Explorer
+ , IE浏览器(Win10及以上登录需要用到此组件中的IE内核)
+ , 2
+ , Program Files\internet explorer / Program Files (x86)\Internet Explorer / @sys-iesysprep.dll
+;
+[8] Windows Media Player
+ , 媒体播放器
+ , 1
+ , Program Files\Windows Media Player / Program Files (x86)\Windows Media Player / ProgramData\Microsoft\Media Player / @sys-unregmp2.exe / @sys-msmpeg2vdec.dll / @sys-msvidctl.dll / @sys-WMASF.DLL / @sys-WMADMOD.DLL / @sys-WMADMOE.DLL / @sys-WmpDui.dll / @sys-wmploc.DLL / @sys-wmpdxm.dll / @sys-wmpeffects.dll / @sys-WMPhoto.dll / @sys-wmpshell.dll / @sys-wmpps.dll / @sys-WMNetMgr.dll / @sys-WMPDMC.exe / @sys-wmp.dll / @sys-WMVSDECD.DLL / @sys-WMSPDMOD.DLL / @sys-WMVSENCD.DLL / @sys-wmvdspa.dll / @sys-WMSPDMOE.DLL / @sys-WMVXENCD.DLL / @sys-WMVCORE.DLL / @sys-WMVDECOD.DLL / @sys-WMVENCOD.DLL / Users\Public\Music\Sample Music / Users\Public\Videos\Sample Videos / Users\Public\Pictures\Sample Pictures
+;
+[8] Windows Mail
+ , 邮件
+ , 1
+ , Program Files (x86)\Windows Mail / Program Files\Windows Mail
+;
+[8] Windows Photo Viewer
+ , 照片查看器
+ , 2
+ , Program Files (x86)\Windows Photo Viewer / Program Files\Windows Photo Viewer
+;
+[8] 资源管理器(Explorer-32位)
+ , 资源管理器, 不建议移除
+ , 2
+ , @sys64-explorer.exe
+;
+[8] 资源管理器(Explorer-64位)
+ , 资源管理器, 不建议移除
+ , 3
+ , @sys32-explorer.exe
+;
+[8] Windows 更新
+ , 移除后, 系统将无法更新与补丁
+ , 3
+ , @sys-wuapi.dll / @sys-wuapp.exe / @sys-wudriver.dll / @sys-wups.dll / @sys-wusa.exe / @sys-wuwebv.dll / @sys-usosvcimpl.dll / @sys-chkwudrv.dll
+;
+[8] 审核
+ , 在系统过完OOBE后第一次进入桌面时, 会进行审计, 检查系统文件以及状态, 若检测出问题, 则会报错.
+ , 2
+ , @sys-oobe\audit.exe / @sys-oobe\AuditShD.exe
+;
+[8] Windows 防火墙
+ , Defender依赖此功能
+ , 3
+ , @sys-FirewallAPI.dll / @sys-FwRemoteSvr.dll / @sys-AuthFWGP.dll / @sys-Firewall.cpl / @sys-FilterDS.dll
+;
+[8] OneDrive
+ , 微软网盘是微软的云存储服务器, 允许微软用户同步文件, 可用Web浏览器访问也可用移动设备访问.
+ , 1
+ , @sys-OneDriveSettingSyncProvider.dll / @sys-SettingsHandlers_OneDriveBackup.dll / Users\Default\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\OneDrive.lnk
+;
+[8] Windows Update 自动更新
+ , Windows Update自动更新客户端
+ , 1
+ , @sys-updateagent.dll / @sys-wuapi.dll / @sys-wuapihost.exe / @sys-wuauclt.exe / @sys-wuaueng.dll / @sys-wucltux.dll / @sys-WindowsAnytimeUpgrade.exe / @sys-WindowsAnytimeUpgradeResults.exe / @sys-WindowsAnytimeUpgradeui.exe
+;
+[8] 屏幕保护程序
+ , 屏保
+ , 1
+ , @sys-Mystify.scr / @sys-Bubbles.scr / @sys-PhotoScreensaver.scr / @sys-Ribbons.scr / @sys-scrnsave.scr / @sys-ssText3d.scr
+;
+[8] 滑动关机
+ , 为笔记本用户定制功能, 下滑关机.
+ , 1
+ , @sys-SlideToShutDown.exe
+;
+[8] 电子邮件命名填充提供程序
+ , 未知
+ , 4
+ , @sys-NapiNSP.dll
+;
+[8] 启动文件服务实用程序
+ , 未知
+ , 4
+ , windows\bfsvc.exe / windows\zh-cn\bfsvc.exe.mui
+;
+[8] 家长控制
+ , 
+ , 1
+ , @sys-pegi.rs / @sys-pegi-pt.rs / @sys-pcbp.rs
+;
+[8] 高级显示适配器属性
+ , 高级显示适配器属性
+ , 2
+ , @sys-deskadp.dll / @sys-deskmon.dll
+;
+[8] 被取代的组件
+ , 一些Windows组件包的数据文件备份, 通常移除这个不会有问题(精简系统一般用零字节填充的办法来处理这个文件夹).
+ , 2
+ , Windows\winsxs\backup
+;
+[8] 组件池缓存
+ , 组件池缓存文件
+ , 1
+ , windows\winsxs\temp / windows\winsxs\installtemp / windows\winsxs\ManifestCache
+;
+[8] 生物识别(Windows Hello)
+ , 生物特征识别登录授权
+ , 1
+ , @sys-ngcrecovery.dll / @sys-NgcIso.exe / @sys-NgcIsoCtnr.dll
+;
+[8] Xbox
+ , 所有Xbox组件,以及游戏录制工具
+ , 2
+ , Windows\SystemApps\Microsoft.Windows.XGpuEjectDialog_* / Windows\SystemApps\Microsoft.XboxGameCallableUI_* / @sys-XblGameSaveTask.exe / @sys-XblGameSaveProxy.dll / @sys-XblGameSaveExt.dll / @sys-xboxgipsynthetic.dll / @sys-XblAuthManagerProxy.dll / @sys-XblAuthTokenBrokerExt.dll / @sys-XboxGipRadioManager.dll / @sys-xboxgipsvc.dll / @sys-XblAuthManager.dll / @sys-XboxNetApiSvc.dll / @sys-XblGameSave.dll
+;
+[8] BitLocker
+ , 硬件加密锁
+ , 2
+ , Windows\BitLockerDiscoveryVolumeContents / @sys-BitLockerCsp.dll / @sys-BitLockerDeviceEncryption.exe / @sys-BitLockerWizard.exe / @sys-BitLockerWizardElev.exe
+;
+[8] 手写笔
+ , 手写笔服务
+ , 2
+ , @sys-PenService.dll
+;
+[8] 便携式设备
+ , 便携式设备
+ , 2
+ , Program Files\Windows Portable Devices / Program Files (x86)\Windows Portable Devices
+;
+[8] 自然身份验证服务
+ , 启用基于传感器输入和其他信任因素的无冲突身份验证, 支持设备解锁, 动态锁和Dynamo MDM策略.
+ , 0
+ , @sys-NaturalAuth.dll
+;
+[8] 上一版本的Windows系统残留
+ , 这个是升级安装留下的备份文件, 可以通过此文件来还原上一版本, 在删除之前请查看里面是否还有重要文件没有备份, 请特别留意"用户"文件夹. (Windows.old)
+ , 0
+ , Windows.old
+;
+[8] 无人值守
+ , 无人值守的配置文件, 删除后不会影响无人值守执行功能. (Autounattend)
+ , 1
+ , Windows\Panther
+;
+[8] 系统数据
+ , Windows 7以上系统文件夹, 放置程序的使用数据、设置等文件, 不建议删除.
+ , 2
+ , Program Data
+;
+[8] 卷影复制(服务)
+ , 管理并执行用于备份和其他用途的卷影复制.
+ , 3
+ , @sys-VSSVC.exe
+;
+[8] 卷影复制(API-32位)
+ , 包含应用程序主要功能所依赖的库, 保留此项以备某些应用程序能够正常启动.
+ , 3
+ , @sys-vss_ps.dll / @sys-vssapi.dll / @sys-vsstrace.dll
+;
+[8] 卷影复制(API-32位)
+ , 包含应用程序主要功能所依赖的库, 保留此项以备某些应用程序能够正常启动.
+ , 3
+ , @sys-vssapi.dll / @sys-vsstrace.dll
+;
+[8] 用户账户控制(UAC)
+ , 通知用户是否对应用程序使用硬盘驱动器和系统文件授权, 以达到帮助阻止恶意软件损坏系统的效果.
+ , 3
+ , @sys-UserAccountControlSettings.exe
+;
+[8] 交互服务检测
+ , 启用交互服务需要用户输入时进行用户通知, 这样可便在交互服务创建的对话框出现时访问这些对话框. 如果停止或移除此服务, 则对新交互服务对话框的通知将无法运行和访问.
+ , 2
+ , @sys-UI0Detect.exe
+;
+[8] Windows 服务主进程(32位)
+ , Windows 服务主进程
+ , 2
+ , @sys64-svchost.exe
+;
+
+
+
+[9] 运行时接口
+ , WinRT. 用于管理和控制应用程序行为的编程接口
+ , 3
+ , @sys-RuntimeBroker.exe / Program Files\WindowsApps\Microsoft.NET.Native.Runtime*
+;
+[9] 选取应用(32位)
+ , 当打开一个没有创建关联的文件类型时, 会提示使用什么应用程序打开这个文件.
+ , 2
+ , @sys64-OpenWith.exe
+;
+[9] 选取应用(64位)
+ , 当打开一个没有创建关联的文件类型时, 会提示使用什么应用程序打开这个文件.
+ , 3
+ , @sys32-OpenWith.exe
+;
+[9] 压缩
+ , ZIP压缩以及解压
+ , 1
+ , @sys-zipfldr.dll / @sys-zipcontainer.dll
+;
+[9] OOBE网络
+ , OOBE需要此功能
+ , 3
+ , Windows\SystemApps\Microsoft.Windows.OOBENetworkCaptivePortal_* / Windows\SystemApps\Microsoft.Windows.OOBENetworkConnectionFlow_*
+;
+[9] 映像服务API(32位)
+ , DISMAPI, WIMGAPI
+ , 2
+ , @sys32-DismApi.dll / @sys32-wimgapi.dll
+;
+[9] 映像服务API(64位)
+ , DISMAPI, WIMGAPI
+ , 3
+ , @sys64-DismApi.dll / @sys64-wimgapi.dll
+;
+[9] Windows PowerShell
+ , 超级终端
+ , 3
+ , Program Files\WindowsPowerShell / Program Files (x86)\WindowsPowerShell / Windows\System32\WindowsPowerShell / Windows\SysWOW64\WindowsPowerShell / ProgramData\Microsoft\Windows\Start Menu\Programs\Windows PowerShell / ProgramData\Microsoft\Windows\Start Menu\Programs\Accessories\Windows PowerShell / Users\Default\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Windows PowerShell / Users\Default\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Windows PowerShell\Windows PowerShell.lnk
+;
+[9] NT64内核运行Win32App
+ , 64位操作系统运行32位应用程序.
+ , 3
+ , windows\syswow64 / @sys-wow64.dll / @sys32-acwow64.dll / @sys32-wow64cpu.dll / @sys32-wow64win.dll / @sys-wowreg32.exe
+;
+[9] 帮助
+ , 帮助文件、查看帮助文件的组件以及其他组件的帮助程序.
+ , 1
+ , Windows\help / Windows\helppane.exe / Windows\hh.exe / Windows\winhlp32.exe / Windows\zh-cn\hh.exe.mui / Windows\zh-cn\winhlp32.exe.mui / Windows\zh-cn\helppane.exe.mui / @sys32-WSHTCPIP.DLL / @sys32-IPHLPAPI.DLL / @sys32-netiohlp.dll / @sys32-nlahc.dll / @sys32-nettrace.dll / @sys32-nshipsec.dll / @sys32-nshwfp.dll / @sys32-p2pnetsh.dll / @sys32-psapi.dll / @sys32-dhcpsapi.dll / @sys32-fodhelper.exe / @sys64-WSHTCPIP.DLL / @sys64-IPHLPAPI.DLL / @sys64-netiohlp.dll / @sys64-nlahc.dll / @sys64-nettrace.dll / @sys64-nshipsec.dll / @sys64-nshwfp.dll / @sys64-p2pnetsh.dll / @sys64-psapi.dll / @sys64-dhcpsapi.dll / @sys64-fodhelper.exe
+;
+[9] 应用程序兼容性
+ , 不建议移除, 移除后可能导致某些应用无法打开,闪退等.
+ , 2
+ , @sys-Apphlpdm.dll / @sys-Apphlpdm.dll
+;
+[9] 运行提升的旧控制面板配置
+ , 运行提升的旧 CPL
+ , 0
+ , @sys-RunLegacyCPLElevated.exe
+;
+[9] Windows 模块安装程序
+ , 不建议移除.
+ , 3
+ , Windows\servicing\TrustedInstaller.exe / Windows\servicing\zh-cn\TrustedInstaller.exe.mui / @sys-TrustedInstaller.exe / Windows\WinSxS\amd64_microsoft-windows-trustedinstaller_*
+;
+[9] 调试
+ , Visual Studio Debuger
+ , 1
+ , Program Files\Common Files\microsoft shared\VS7Debug
+;
+[9] 旧的符号链接
+ , 为兼容老系统所产生的符号链接, 这个在系统部署时会重新生成, 所以这个选项基本只用在已部署的系统上定制.
+ , 2
+ , Document and Settings
+;
+[9] INF默认安装(32位)
+ , 
+ , 2
+ , @sys64-InfDefaultInstall.exe / #infdefaultinstall|wow64
+;
+[9] INF默认安装(64位)
+ , 
+ , 3
+ , @sys32-InfDefaultInstall.exe / #infdefaultinstall|amd64
+;
+[9] rasctrnm.h
+ , 远程访问性能支持模块
+ , 0
+ , @sys-rasctrnm.h
+;
+[9] 自动注册DLL
+ , 自动注册DLL
+ , 2
+ , @sys-pautoenr.dll
+;
+
+
+[10] 控制面板
+ , 调整计算机的设置
+ , 2
+ , @sys64-control.exe
+;
+[10] 网络ID 页
+ , 系统控制面板小程序 - 网络ID 页
+ , 1
+ , @sys64-netid.dll
+;
+[10] 轻松使用
+ , 系统控制面板小程序 - 轻松使用
+ , 1
+ , @sys64-accessibilitycpl.dll / @sys64-EaseOfAccessDialog.exe
+;
+[10] 显示
+ , 系统控制面板小程序 - 显示设置
+ , 1
+ , @sys64-DpiScaling.exe / @sys64-Display.dll
+;
+[10] 安全与维护
+ , 系统控制面板小程序 - 安全维护
+ , 1
+ , @sys64-ActionCenter.dll / @sys64-ActionCenterCPL.dll / @sys64-wscui.cpl
+;
+[10] 高级用户帐户
+ , 系统控制面板小程序 - 高级用户帐户
+ , 1
+ , @sys64-Netplwiz.exe
+;
+[10] Windows 防火墙
+ , 系统控制面板小程序 - 防火墙
+ , 1
+ , @sys64-FirewallControlPanel.dll
+;
+[10] 高级系统设置
+ , 此电脑 - 属性 - 高级系统设置.
+ , 1
+ , @sys64-SystemPropertiesAdvanced.exe
+;
+[10] Windows 功能
+ , 启用或关闭Windows 功能
+ , 1
+ , @sys64-ocsetapi.dll
+;
+[10] 颜色管理
+ , 无
+ , 1
+ , @sys64-colorcpl.exe
+;
+[10] DirectX
+ , DirectX面板
+ , 1
+ , @sys64-dxcpl.exe
+;
+[10] iSCSI
+ , iSCSI
+ , 1
+ , @sys64-iscsicpl.exe
+;
+[10] 蓝牙
+ , bth
+ , 1
+ , @sys64-bthprops.cpl
+;
+[10] 显示设置
+ , 更改显示设置
+ , 1
+ , @sys64-desk.cpl
+;
+[10] 设备管理器
+ , 管理设备
+ , 1
+ , @sys64-hdwwiz.cpl
+;
+[10] 时间和日期
+ , 更改日期和时间
+ , 1
+ , @sys64-timedate.cpl
+;
+[10] 电话
+ , 调制解调器
+ , 1
+ , @sys64-telephon.cpl
+;
+[10] 系统属性
+ , 更改系统设置
+ , 1
+ , @sys64-sysdm.cpl
+;
+[10] 电源
+ , 电源选项
+ , 1
+ , @sys64-powercfg.cpl
+;
+[10] 网络
+ , 网络连接
+ , 1
+ , @sys64-ncpa.cpl
+;
+[10] 声音
+ , 无
+ , 1
+ , @sys64-mmsys.cpl
+;
+[10] 鼠标
+ , 更改鼠标以及指针设置
+ , 1
+ , @sys64-main.cpl
+;
+[10] 游戏控制器
+ , 游戏控制器
+ , 1
+ , @sys64-joy.cpl
+;
+[10] 红外线
+ , 红外线设置
+ , 1
+ , @sys64-irprops.cpl
+;
+[10] 区域
+ , 区域设置
+ , 1
+ , @sys64-intl.cpl
+;
+[10] Internet 属性
+ , IE设置
+ , 1
+ , @sys64-inetcpl.cpl
+;
+[10] 更改数据执行保护设置
+ , 
+ , 1
+ , @sys64-SystemPropertiesDataExecutionPrevention.exe
+;
+[10] 系统远程设置
+ , 系统属性
+ , 1
+ , @sys64-SystemPropertiesRemote.exe
+;
+[10] 计算机名
+ , 系统属性
+ , 1
+ , @sys64-SystemPropertiesComputerName.exe
+;
+[10] 系统属性
+ , 
+ , 1
+ , @sys64-SystemPropertiesHardware.exe
+;
+[10] 性能选项
+ , 视觉效果
+ , 1
+ , @sys64-SystemPropertiesPerformance.exe
+;
+[10] 系统保护
+ , 系统属性
+ , 1
+ , @sys64-SystemPropertiesProtection.exe
+;
+
+
+
+[11] 控制面板
+ , 调整计算机的设置
+ , 3
+ , @sys32-control.exe
+;
+[11] 网络ID 页
+ , 系统控制面板小程序 - 网络ID 页
+ , 1
+ , @sys32-netid.dll
+;
+[11] 轻松使用
+ , 系统控制面板小程序 - 轻松使用
+ , 1
+ , @sys32-accessibilitycpl.dll / @sys32-EaseOfAccessDialog.exe
+;
+[11] 显示
+ , 系统控制面板小程序 - 显示设置
+ , 1
+ , @sys32-DpiScaling.exe / @sys32-Display.dll
+;
+[11] 维护设置
+ , 系统控制面板小程序 - 维护设置
+ , 1
+ , @sys32-MaintenanceUI.dll
+;
+[11] 安全与维护
+ , 系统控制面板小程序 - 安全维护
+ , 2
+ , @sys32-ActionCenter.dll / @sys32-ActionCenterCPL.dll / @sys32-wscui.cpl
+;
+[11] 高级用户帐户
+ , 系统控制面板小程序 - 高级用户帐户
+ , 2
+ , @sys32-Netplwiz.exe
+;
+[11] Windows 防火墙
+ , 系统控制面板小程序 - 防火墙
+ , 2
+ , @sys32-FirewallControlPanel.dll
+;
+[11] 高级系统设置
+ , 此电脑 - 属性 - 高级系统设置.
+ , 3
+ , @sys32-SystemPropertiesAdvanced.exe
+;
+[11] Windows 功能
+ , 启用或关闭Windows 功能
+ , 2
+ , @sys32-OptionalFeatures.exe / @sys32-ocsetapi.dll
+;
+[11] 颜色管理
+ , 无
+ , 1
+ , @sys32-colorcpl.exe
+;
+[11] DirectX
+ , DirectX面板
+ , 2
+ , @sys32-dxcpl.exe
+;
+[11] iSCSI
+ , iSCSI
+ , 1
+ , @sys32-iscsicpl.exe
+;
+[11] 蓝牙
+ , bth
+ , 2
+ , @sys32-bthprops.cpl
+;
+[11] 显示设置
+ , 更改显示设置
+ , 2
+ , @sys32-desk.cpl
+;
+[11] 设备管理器
+ , 管理设备
+ , 2
+ , @sys32-hdwwiz.cpl
+;
+[11] 时间和日期
+ , 更改日期和时间
+ , 1
+ , @sys32-timedate.cpl
+;
+[11] 电话
+ , 调制解调器
+ , 1
+ , @sys32-telephon.cpl
+;
+[11] 系统属性
+ , 更改系统设置
+ , 2
+ , @sys32-sysdm.cpl
+;
+[11] 电源
+ , 电源选项
+ , 2
+ , @sys32-powercfg.cpl
+;
+[11] 网络
+ , 网络连接
+ , 2
+ , @sys32-ncpa.cpl
+;
+[11] 声音
+ , 无
+ , 2
+ , @sys32-mmsys.cpl
+;
+[11] 鼠标
+ , 更改鼠标以及指针设置
+ , 2
+ , @sys32-main.cpl
+;
+[11] 游戏控制器
+ , 游戏控制器
+ , 2
+ , @sys32-joy.cpl
+;
+[11] 红外线
+ , 红外线设置
+ , 1
+ , @sys32-irprops.cpl
+;
+[11] 区域
+ , 区域设置
+ , 1
+ , @sys32-intl.cpl
+;
+[11] Internet 属性
+ , IE设置
+ , 2
+ , @sys32-inetcpl.cpl
+;
+[11] TabletPC
+ , 笔和触摸
+ , 1
+ , @sys32-TabletPC.cpl
+;
+[11] 性能选项
+ , 更改数据执行保护设置
+ , 1
+ , @sys32-SystemPropertiesDataExecutionPrevention.exe
+;
+[11] 系统远程设置
+ , 系统属性
+ , 1
+ , @sys32-SystemPropertiesRemote.exe
+;
+[11] 计算机名
+ , 系统属性
+ , 1
+ , @sys32-SystemPropertiesComputerName.exe
+;
+[11] 系统属性
+ , 
+ , 2
+ , @sys32-SystemPropertiesHardware.exe
+;
+[11] 性能选项
+ , 视觉效果
+ , 2
+ , @sys32-SystemPropertiesPerformance.exe
+;
+[11] 系统保护
+ , 系统属性
+ , 2
+ , @sys32-SystemPropertiesProtection.exe
+;
+
+
+
+[12] COM+组件服务
+ , COM+组件服务管理控制台
+ , 1
+ , @sys64-comexp.msc
+;
+[12] Windows 防火墙
+ , Windows 防火墙管理控制台
+ , 1
+ , @sys64-WF.msc
+;
+[12] 事件查看器
+ , 事件收集器 - 此服务将管理对支持WS-Management 协议的远程源中事件的永久订阅. 该服务将转发的事件存储在本地活动日志中.
+ , 1
+ , @sys64-eventvwr.msc / @sys64-eventvwr.exe
+;
+[12] 共享文件夹
+ , 共享文件夹控制台
+ , 1
+ , @sys64-\fsmgmt.msc
+;
+[12] 受信任的平台模块
+ , TPM管理控制台
+ , 1
+ , @sys64-\tpm.msc
+;
+[12] 打印管理
+ , 打印管理控制台
+ , 1
+ , @sys64-\printmanagement.msc
+;
+[12] 授权管理器
+ , .NET程序的一套基于规则的访问和安全框架
+ , 1
+ , @sys64-\azman.msc
+;
+[12] 服务
+ , 服务管理控制台
+ , 1
+ , @sys64-\services.msc
+;
+[12] 本地用户和组
+ , 依赖于此的功能: 映射网络驱动器,旧账户控制
+ , 1
+ , @sys64-\lusrmgr.msc
+;
+[12] 磁盘管理
+ , 磁盘管理控制台
+ , 1
+ , @sys64-\diskmgmt.msc
+;
+[12] 计划任务
+ , 计划任务管理控制台
+ , 1
+ , @sys64-taskschd.msc / @sys64-taskschd.dll / @sys64-TaskSchdPS.dll
+;
+[12] 计算机管理
+ , 计算机管理控制台
+ , 1
+ , @sys64-compmgmt.msc
+;
+[12] 设备管理器
+ , 设备管理器控制台
+ , 1
+ , @sys64-devmgmt.msc
+;
+[12] 证书管理器
+ , 证书管理器控制台
+ , 1
+ , @sys64-certmgr.msc / @sys64-certmgr.dll / @sys64-certlm.msc
+;
+[12] Group Policy Client
+ , 组策略客户端
+ , 1
+ , @sys64-gpedit.msc
+;
+[12] 策略的结果集
+ , 此管理单元可用于查看已应用的策略，以及预测将为计算机上的用户应用的策略。
+ , 1
+ , @sys64-rsop.msc / @sys64-rsop.mfl / @sys64-rsop.mof / Windows\SysWOW64\wbem\scersop.mof / Windows\Help\mui\0804\rsop.CHM / @sys64-rsop.CHM
+;
+
+
+
+[13] COM+组件服务
+ , COM+组件服务管理控制台
+ , 2
+ , @sys32-comexp.msc
+;
+[13] Windows 防火墙
+ , Windows 防火墙管理控制台
+ , 3
+ , @sys32-WF.msc
+;
+[13] 事件查看器
+ , 事件收集器 - 此服务将管理对支持WS-Management 协议的远程源中事件的永久订阅. 该服务将转发的事件存储在本地活动日志中.
+ , 3
+ , @sys32-eventvwr.msc / @sys32-eventvwr.exe
+;
+[13] 共享文件夹
+ , 共享文件夹控制台
+ , 2
+ , @sys32-fsmgmt.msc
+;
+[13] 受信任的平台模块
+ , TPM管理控制台
+ , 3
+ , @sys32-tpm.msc
+;
+[13] 打印管理
+ , 打印管理控制台
+ , 1
+ , @sys32-printmanagement.msc
+;
+[13] 授权管理器
+ , .NET程序的一套基于规则的访问和安全框架
+ , 2
+ , @sys32-azman.msc
+;
+[13] 服务
+ , 服务管理控制台
+ , 3
+ , @sys32-services.msc
+;
+[13] 本地用户和组
+ , 依赖于此的功能: 映射网络驱动器,旧账户控制
+ , 3
+ , @sys32-lusrmgr.msc
+;
+[13] 磁盘管理
+ , 磁盘管理控制台
+ , 3
+ , @sys32-diskmgmt.msc
+;
+[13] 计划任务
+ , 计划任务管理控制台
+ , 3
+ , @sys32-taskschd.msc / @sys32-taskschd.dll / @sys32-TaskSchdPS.dll
+;
+[13] 计算机管理
+ , 计算机管理控制台
+ , 3
+ , @sys32-compmgmt.msc
+;
+[13] 设备管理器
+ , 设备管理器控制台
+ , 3
+ , @sys32-devmgmt.msc
+;
+[13] 证书管理器
+ , 证书管理器控制台
+ , 3
+ , @sys32-certmgr.msc / @sys32-certmgr.dll / @sys32-certlm.msc
+;
+[13] 策略的结果集
+ , 此管理单元可用于查看已应用的策略，以及预测将为计算机上的用户应用的策略。
+ , 1
+ , @sys32-rsop.msc / @sys32-rsop.mfl / @sys32-rsop.mof / Windows\System32\wbem\scersop.mof / Windows\Help\mui\0804\rsop.CHM / @sys32-rsop.CHM
+;
+
+
+
+
+[14] Group Policy Client
+ , 组策略客户端
+ , 3
+ , @sys32-gpedit.msc
+;
+[14] Local Security Policy Editor
+ , 本地安全策略编辑器(用来检查或配置工作组或家庭组机器上的安全设置)
+ , 2
+ , @sys32-secpol.msc
+;
+
+
+
+[15] Recovery Agent(恢复助手)
+ , 最小化的系统恢复支持, 用于UEFI按住Shift重启系统选项进行疑难解答选项和双启动菜单.
+ , 3
+ , @sys32-ReAgentc.exe / @sys64-ReAgentc.exe / Windows\PolicyDefinitions\zh-CN\ReAgent.adml / Windows\PolicyDefinitions\ReAgent.admx / @sys32-ReAgent.dll / @sys64-ReAgent.dll / Windows\Logs\ReAgent / @sys32-Recovery / @sys64-Recovery / @sys32-ReAgentTask.dll
+;
+[15] Windows Recovery(WinRE)
+ , 一个修复环境, 用于修复常规原因引起的系统不可启动等问题.
+ , 2
+ , Recovery / @sys32-Recovery / @sys64-Recovery
+;
+[15] Recovery Reset 支持
+ , 系统内置工具, 可擦除用户数据将计算机恢复到出厂状态, 用户可以选择仅保留个人数据或者擦除所有数据.
+ , 2
+ , @sys32-systemreset.exe / @sys32-SystemResetPlatform
+;
+
+
+
+[16] 屏幕键盘(32位)
+ , 虚拟键盘
+ , 1
+ , @sys64-osk.exe / @sys64-OskSupport.dll
+;
+[16] 屏幕键盘(64位)
+ , 虚拟键盘
+ , 1
+ , @sys32-osk.exe / @sys32-OskSupport.dll
+;
+[16] 屏幕阅读器(32位)
+ , 轻松使用中的组件
+ , 1
+ , @sys64-Narrator.exe
+;
+[16] 屏幕阅读器(64位)
+ , 轻松使用中的组件
+ , 1
+ , @sys32-Narrator.exe
+;
+[16] 屏幕放大镜(32位)
+ , 将鼠标指针指到的部分区域放大
+ , 1
+ , @sys64-Magnify.exe
+;
+[16] 屏幕放大镜(64位)
+ , 将鼠标指针指到的部分区域放大
+ , 1
+ , @sys32-Magnify.exe
+;
+[16] 演讲者
+ , 轻松使用 - 演讲者
+ , 1
+ , Windows\Speech / Windows\Speech_OneCore / Windows\System32\Speech / Windows\System32\Speech_OneCore
+;
+
+
+
+[17] Notepad
+ , 记事本
+ , 1
+ , @sys64-notepad.exe
+;
+[17] 写字板
+ , 富文本编辑器, 类似于Word
+ , 1
+ , @sys64-write.exe
+;
+[17] 画图
+ , 绘画工具
+ , 1
+ , @sys64-mspaint.exe
+;
+
+
+
+[18] Notepad
+ , 记事本
+ , 2
+ , windows\notepad.exe / Windows\zh-CN\notepad.exe.mui / @sys32-notepad.exe / Users\defaultuser0\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Accessories\记事本.lnk
+;
+[18] 写字板
+ , 富文本编辑器, 类似于Word
+ , 1
+ , Windows\write.exe / @sys32-write.exe
+;
+[18] 画图
+ , 绘画工具
+ , 1
+ , @sys32-mspaint.exe
+;
+
+
+
+[19] Shutdown
+ , Shutdown
+ , 1
+ , @sys64-shutdown.exe
+;
+[19] TCP/IP Arp
+ , 显示和修改地址解析协议(ARP)使用的“IP 到物理”地址转换表
+ , 1
+ , @sys64-ARP.EXE
+;
+[19] Reg
+ , 注册表操作命令
+ , 1
+ , @sys64-reg.exe
+;
+[19] Ping
+ , TCP/IP Ping 命令
+ , 1
+ , @sys64-PING.EXE
+;
+[19] RPC Ping
+ , RPC Ping 实用程序
+ , 1
+ , @sys64-RpcPing.exe
+;
+[19] Where
+ , 显示符合搜索模式的文件位置.
+ , 1
+ , @sys64-where.exe
+;
+[19] vssadmin
+ , 卷影复制服务管理命令行工具
+ , 1
+ , @sys64-vssadmin.exe
+;
+[19] 属性实用程序
+ , 显示或更改文件属性
+ , 1
+ , @sys64-attrib.exe
+;
+[19] Tree
+ , 树形遍历
+ , 1
+ , @sys64-tree.com
+;
+[19] xcopy
+ , 复制文件和目录树
+ , 1
+ , @sys64-xcopy.exe
+;
+[19] AT for Windows XP
+ , 计划服务命令行接口
+ , 1
+ , @sys64-at.exe / @sys64-atl.dll
+;
+[19] CheckDisk
+ , 检查磁盘并显示状态报告
+ , 1
+ , @sys64-chkdsk.exe
+;
+[19] 显示帮助信息
+ , 在命令提示符中键入Help, 会显示可用命令列表
+ , 1
+ , @sys64-help.exe
+;
+[19] 磁盘恢复
+ , 从损坏的磁盘中恢复可读取的信息
+ , 1
+ , @sys64-recover.exe
+;
+[19] Windows Performance Recorder
+ , 性能记录器
+ , 1
+ , @sys64-wpr.exe
+;
+[19] 显示当前打开的文件列表
+ , 允许管理员列出系统上已打开的文件和文件夹或与其断开连接
+ , 1
+ , @sys64-openfiles.exe
+;
+[19] BitLocker驱动器加密修复工具
+ , BitLocker 驱动器加密修复工具
+ , 1
+ , @sys64-repair-bde.exe
+;
+[19] Replace
+ , 替换文件
+ , 1
+ , @sys64-replace.exe
+;
+[19] Curl
+ , Curl
+ , 1
+ , @sys64-curl.exe
+;
+[19] Net
+ , Net
+ , 1
+ , @sys64-net.exe
+;
+[19] 装载卷工具
+ , 创建、删除或列出卷装入点
+ , 1
+ , @sys64-mountvol.exe
+;
+[19] 终止进程
+ , 使用该工具按照进程 ID (PID) 或映像名称终止任务
+ , 1
+ , @sys64-taskkill.exe
+;
+[19] 列出当前运行的任务
+ , 显示在本地或远程机器上当前运行的进程列表
+ , 2
+ , @sys64-tasklist.exe
+;
+[19] SUBST
+ , 将路径与驱动器号关联
+ , 1
+ , @sys64-subst.exe
+;
+[19] 排序工具
+ , 对输入排序
+ , 1
+ , @sys64-sort.exe
+;
+[19] 计划任务配置
+ , 创建、删除、查询、更改、运行和中止本地或远程系统上的计划任务
+ , 1
+ , @sys64-schtasks.exe
+;
+[19] 显示或配置服务(SC)
+ , 与服务控制管理器和服务进行通信
+ , 1
+ , @sys64-sc.exe
+;
+
+
+
+
+[20] shutdown
+ , Shutdown
+ , 1
+ , @sys32-shutdown.exe
+;
+[20] TCP/IP Arp
+ , 显示和修改地址解析协议(ARP)使用的“IP 到物理”地址转换表
+ , 1
+ , @sys32-ARP.EXE
+;
+[20] Reg
+ , 注册表操作命令
+ , 2
+ , @sys32-reg.exe
+;
+[20] Ping
+ , TCP/IP Ping 命令
+ , 1
+ , @sys32-PING.EXE
+;
+[20] RPC Ping
+ , RPC Ping 实用程序
+ , 1
+ , @sys32-RpcPing.exe
+;
+[20] Where
+ , 显示符合搜索模式的文件位置.
+ , 1
+ , @sys32-where.exe
+;
+[20] vssadmin
+ , 卷影复制服务管理命令行工具
+ , 1
+ , @sys32-vssadmin.exe
+;
+[20] 属性实用程序
+ , 显示或更改文件属性
+ , 1
+ , @sys32-attrib.exe
+;
+[20] BcdBoot
+ , 启动文件创建和修复工具
+ , 2
+ , @sys32-bcdboot.exe
+;
+[20] BcdEdit
+ , Windows 启动管理器
+ , 2
+ , @sys32-bcdedit.exe
+;
+[20] Bootsect
+ , 扇区恢复工具
+ , 2
+ , @sys32-bootsect.exe
+;
+[20] Tree
+ , 树形遍历
+ , 1
+ , @sys32-tree.com
+;
+[20] xcopy
+ , 复制文件和目录树
+ , 1
+ , @sys32-xcopy.exe
+;
+[20] AT for Windows XP
+ , 计划服务命令行接口
+ , 1
+ , @sys32-at.exe / @sys32-atl.dll
+;
+[20] CheckDisk
+ , 检查磁盘并显示状态报告
+ , 2
+ , @sys32-chkdsk.exe
+;
+[20] 磁盘恢复
+ , 从损坏的磁盘中恢复可读取的信息
+ , 1
+ , @sys32-recover.exe
+;
+[20] Windows Performance Recorder
+ , 性能记录器
+ , 1
+ , @sys32-wpr.exe
+;
+[20] 显示当前打开的文件列表
+ , 允许管理员列出系统上已打开的文件和文件夹或与其断开连接
+ , 1
+ , @sys32-openfiles.exe
+;
+[20] BitLocker驱动器加密修复工具
+ , BitLocker 驱动器加密修复工具
+ , 1
+ , @sys32-repair-bde.exe
+;
+[20] Replace
+ , 替换文件
+ , 1
+ , @sys32-replace.exe
+;
+[20] Curl
+ , Curl
+ , 1
+ , @sys32-curl.exe
+;
+[20] Net
+ , Net
+ , 2
+ , @sys32-net.exe
+;
+[20] 装载卷工具
+ , 创建、删除或列出卷装入点
+ , 1
+ , @sys32-mountvol.exe
+;
+[20] 终止进程
+ , 使用该工具按照进程 ID (PID) 或映像名称终止任务
+ , 2
+ , @sys32-taskkill.exe
+;
+[20] 列出当前运行的任务
+ , 显示在本地或远程机器上当前运行的进程列表
+ , 2
+ , @sys32-tasklist.exe
+;
+[20] SUBST
+ , 将路径与驱动器号关联
+ , 1
+ , @sys32-subst.exe
+;
+[20] 排序工具
+ , 对输入排序
+ , 1
+ , @sys32-sort.exe
+;
+[20] 计划任务配置
+ , 创建、删除、查询、更改、运行和中止本地或远程系统上的计划任务
+ , 1
+ , @sys32-schtasks.exe
+;
+[20] 显示或配置服务(SC)
+ , 与服务控制管理器和服务进行通信
+ , 2
+ , @sys32-sc.exe
+;
+
+
+
+
+[21] 专用字符编辑程序
+ , 编辑/创建自己的字体字符
+ , 1
+ , @sys64-eudcedit.exe
+;
+[21] XPS Viewer
+ , XPS 查看器是一种可以用来查看、搜索 XPS 文档, 并为 XPS 文档设置许可及进行数字签名的程序.
+ , 1
+ , @sys64-XpsDocumentTargetPrint.dll / @sys64-XpsGdiConverter.dll / @sys64-XpsRasterService.dll / @sys64-XpsPrint.dll / @sys64-xpsservices.dll / @sys64-XpsFilt.dll / @sys64-xpsrchvw.exe / @sys64-XPSSHHDR.dll / @sys64-xpssvcs.dll
+;
+[21] 关于"Windows"
+ , 版本报告小程序
+ , 1
+ , @sys64-winver.exe
+;
+[21] 部署映像服务和管理工具(DISM)
+ , 部署映像服务和管理工具
+ , 2
+ , @sys64-dism / @sys64-dism.exe / @sys64-netmsg.dll / @sys64-wdscore.dll / @sys64-wimserv.exe
+;
+[21] 计算器
+ , 旧版计算器
+ , 1
+ , @sys64-calc.exe / @sys64-win32calc.exe
+;
+[21] 任务管理器(Taskmgr)
+ , 进程,性能,启动项,用户,服务管理工具
+ , 1
+ , @sys64-taskmgr.exe
+;
+[21] 激活管理器
+ , 激活管理器 (Activation Manager)
+ , 2
+ , @sys64-ActivationManager.dll / @sys64-VoiceActivationManager.dll
+;
+[21] 步骤记录器
+ , 步骤记录器
+ , 1
+ , @sys64-psr.exe
+;
+[21] 显示切换
+ , 显示切换小工具. 在Windows8以上叫"投影"
+ , 1
+ , @sys64-DisplaySwitch.exe
+;
+[21] 系统信息
+ , 系统信息查看工具
+ , 1
+ , @sys64-msinfo32.exe / Program Files (x86)\Common Files\microsoft shared\MSInfo\msinfo32.exe / Program Files (x86)\Common Files\microsoft shared\MSInfo\zh-cn\msinfo32.exe.mui
+;
+[21] 字体查看器
+ , Windows 字体查看器
+ , 1
+ , @sys64-fontview.exe
+;
+[21] 系统评估工具(WinSAT)
+ , 很基本的Windows系统性能参考工具, 在控制面板中性能信息与工具下可以找到.
+ , 1
+ , @sys64-wbem\WinsatUninstall.mof / @sys64-WinSATAPI.dll / @sys64-zh-cn\WinSATAPI.dll.mui / @sys64-wbem\Winsat.mof / @sys64-spwinsat.dll
+;
+[21] 系统部署工具(Sysprep)
+ , 会对计算机进行准备以便进行硬件独立和清理.
+ , 1
+ , @sys64-Sysprep
+;
+[21] SAM 锁定工具
+ , 保证 Windows 帐户数据库的安全, 可使你配置帐户数据库以便启用额外的加密, 这样做可进一步保护数据库.
+ , 1
+ , @sys64-syskey.exe
+;
+[21] 打印管理
+ , 包含打印驱动以及程序
+ , 1
+ , Windows\splwow64.exe / @sys64-printui.exe / @sys64-printui.dll / @sys64-prncache.dll / @sys64-printticketvalidation.dll / @sys64-print.exe / @sys64-ntprint.exe / @sys64-zh-cn\ntprint.exe.mui
+;
+[21] 性能监视器
+ , 监视本地或远程计算机上的性能
+ , 1
+ , @sys64-perfmon.exe / @sys64-perfmon.msc
+;
+[21] 游戏录制工具
+ , 游戏录制工具栏, XBOX附属工具.
+ , 1
+ , @sys64-GamePanel.exe / @sys64-GamePanelExternalHook.dll / @sys64-GameChatTranscription.dll / @sys64-GameChatOverlayExt.dll / @sys64-GameBarPresenceWriter.proxy.dll / @sys64-GameBarPresenceWriter.exe
+;
+[21] 驱动器优化程序
+ , 优化驱动器以帮助计算机更高效地运行, 或者分析驱动器以了解是否需要对其进行优化.
+ , 1
+ , @sys64-dfrgui.exe
+;
+[21] 磁盘分区管理
+ , 磁盘性能配置工具
+ , 1
+ , @sys64-diskpart.exe / @sys64-diskperf.exe
+;
+[21] 系统信息查看器
+ , 系统信息查看工具
+ , 1
+ , @sys64-systeminfo.exe
+;
+[21] 证书工具
+ , 包含Util,证书请求和注册工具.
+ , 1
+ , @sys64-certreq.exe / @sys64-CertEnroll.dll / @sys64-CertEnrollCtrl.exe / @sys64-CertEnrollUI.dll / @sys64-CertPKICmdlet.dll / @sys64-CertPolEng.dll / @sys64-certcli.dll / @sys64-certenc.dll / @sys64-certutil.exe / @sys64-certca.dll / @sys64-certCredProvider.dll
+;
+[21] 支持诊断工具
+ , 诊断疑难解答向导
+ , 1
+ , @sys64-msdt.exe
+;
+[21] DirectX 诊断工具
+ , 报告有关 DirectX 组件和安装在系统上的驱动程序的详细信息.
+ , 1
+ , @sys64-dxdiag.exe / @sys64-dxdiagn.dll
+;
+[21] Windows 内存诊断
+ , 检查计算机的内存问题
+ , 1
+ , @sys64-MdSched.exe
+;
+[21] HTML 查看器
+ , Windows 安装 HTML 渲染引擎的最低要求.
+ , 2
+ , @sys64-mshta.exe
+;
+[21] 资源监视器
+ , 监视本地计算机上的性能和资源使用情况
+ , 1
+ , @sys64-resmon.exe
+;
+[21] 追踪性能相关的 CMD 工具
+ , 性能日志工具、性能重新记录工具、命令行性能监视器、事件跟踪报告工具、磁盘性能配置工具
+ , 1
+ , @sys64-logman.exe / @sys64-relog.exe / @sys64-typeperf.exe / @sys64-tracerpt.exe / @sys64-diskperf.exe
+;
+[21] 程序包管理器
+ , DISM依赖于此组件
+ , 1
+ , @sys64-pkgmgr.exe
+;
+[21] 程序兼容助手
+ , 程序兼容性助手, 在打开部分程序,安装/卸载部分软件会出现兼容性警告.
+ , 2
+ , @sys64-pcaevts.dll / @sys64-pcalua.exe / @sys64-pcasvc.dll / @sys64-pcaui.dll / @sys64-pcacli.dll / @sys64-pcadm.dll
+;
+[21] 打印机迁移
+ , 打印机迁移
+ , 1
+ , @sys64-PrintBrmUi.exe
+;
+[21] 音量合成器
+ , 控制设备及应用程序的音量.
+ , 1
+ , @sys64-SndVol.exe
+;
+
+
+
+
+[22] 专用字符编辑程序
+ , 编辑/创建自己的字体字符
+ , 1
+ , @sys32-eudcedit.exe
+;
+[22] XPS Viewer
+ , XPS 查看器是一种可以用来查看、搜索 XPS 文档, 并为 XPS 文档设置许可及进行数字签名的程序.
+ , 1
+ , @sys32-XpsGdiConverter.dll / @sys32-XpsRasterService.dll / @sys32-XpsDocumentTargetPrint.dll / @sys32-XpsPrint.dll / @sys32-xpsservices.dll / ProgramData\Microsoft\Windows\Start Menu\Programs\XPS Viewer.lnk / @sys32-XpsFilt.dll / @sys32-xpsrchvw.exe / @sys32-xpsrchvw.xml / @sys32-XPSSHHDR.dll / @sys32-xpssvcs.dll
+;
+[22] 关于"Windows"
+ , 版本报告小程序
+ , 1
+ , @sys32-winver.exe
+;
+[22] 部署映像服务和管理工具(DISM)
+ , 部署映像服务和管理工具
+ , 3
+ , Windows\System32\dism / @sys32-dism.exe / @sys32-netmsg.dll / @sys32-wdscore.dll / @sys32-wimserv.exe
+;
+[22] 计算器
+ , 旧版计算器
+ , 1
+ , @sys32-calc.exe / @sys32-win32calc.exe
+;
+[22] 任务管理器
+ , 进程,性能,启动项,用户,服务管理工具
+ , 2
+ , @sys32-taskmgr.exe
+;
+[22] 截图工具
+ , 系统自带截图工具
+ , 1
+ , @sys32-SnippingTool.exe
+;
+[22] 激活管理器
+ , 激活管理器
+ , 3
+ , @sys32-ActivationManager.dll / @sys32-VoiceActivationManager.dll
+;
+[22] 程序兼容助手
+ , 程序兼容性助手, 在打开部分程序,安装/卸载部分软件会出现兼容性警告.
+ , 2
+ , @sys32-pcaevts.dll / @sys32-pcalua.exe / @sys32-pcasvc.dll / @sys32-pcaui.dll / @sys32-pcacli.dll / @sys32-pcadm.dll
+;
+[22] 步骤记录器
+ , 步骤记录器
+ , 1
+ , @sys32-psr.exe
+;
+[22] 显示切换
+ , 显示切换小工具. 在Windows8以上叫"投影"
+ , 2
+ , @sys32-DisplaySwitch.exe
+;
+[22] 系统信息
+ , 系统信息查看工具
+ , 1
+ , @sys32-msinfo32.exe / Program Files\Common Files\microsoft shared\MSInfo\msinfo32.exe / Program Files\Common Files\microsoft shared\MSInfo\zh-cn\msinfo32.exe.mui
+;
+[22] 字体查看器
+ , Windows 字体查看器
+ , 1
+ , @sys32-fontview.exe
+;
+[22] 系统评估工具
+ , 很基本的Windows系统性能参考工具, 在控制面板中性能信息与工具下可以找到.
+ , 2
+ , Windows\Performance / @sys32-WinSAT.exe / Windows\System32\wbem\WinsatUninstall.mof / @sys32-WinSATAPI.dll / Windows\System32\wbem\Winsat.mof / @sys32-spwinsat.dll
+;
+[22] 系统部署工具
+ , 会对计算机进行准备以便进行硬件独立和清理.
+ , 1
+ , Windows\System32\Sysprep / @sys32-ProvSysprep.dll
+;
+[22] SAM 锁定工具
+ , 保证 Windows 帐户数据库的安全, 可使你配置帐户数据库以便启用额外的加密, 这样做可进一步保护数据库.
+ , 1
+ , @sys32-syskey.exe
+;
+[22] 打印管理
+ , 包含打印驱动以及程序
+ , 2
+ , @sys32-printui.exe / @sys32-printui.dll / @sys32-prncache.dll / @sys32-printticketvalidation.dll / @sys32-printfilterpipelinesvc.exe / @sys32-printfilterpipelineprxy.dll / @sys32-print.exe / @sys32-ntprint.exe / @sys32-fdprint.dll
+;
+[22] 性能监视器
+ , 监视本地或远程计算机上的性能
+ , 2
+ , @sys32-perfmon.exe / @sys32-perfmon.msc
+;
+[22] 游戏录制工具
+ , 游戏录制工具栏, XBOX附属工具.
+ , 1
+ , @sys32-GamePanel.exe / @sys32-GamePanelExternalHook.dll / @sys32-GameChatTranscription.dll / @sys32-GameChatOverlayExt.dll / @sys32-GameBarPresenceWriter.proxy.dll / @sys32-GameBarPresenceWriter.exe
+;
+[22] 驱动器优化程序
+ , 优化驱动器以帮助计算机更高效地运行, 或者分析驱动器以了解是否需要对其进行优化.
+ , 1
+ , @sys32-dfrgui.exe / @sys32-defragsvc.dll
+;
+[22] 磁盘分区管理工具
+ , 磁盘性能配置工具
+ , 1
+ , @sys32-diskpart.exe / @sys32-diskperf.exe
+;
+[22] 系统信息查看器
+ , 系统信息查看工具
+ , 1
+ , @sys32-systeminfo.exe
+;
+[22] 证书工具
+ , 包含Util,证书请求和注册工具.
+ , 2
+ , @sys32-certreq.exe / @sys32-CertEnroll.dll / @sys32-CertEnrollCtrl.exe / @sys32-CertEnrollUI.dll / @sys32-CertPKICmdlet.dll / @sys32-CertPolEng.dll / @sys32-certcli.dll / @sys32-certenc.dll / @sys32-certutil.exe / @sys32-certca.dll / @sys32-certCredProvider.dll
+;
+[22] 支持诊断工具
+ , 诊断疑难解答向导
+ , 2
+ , @sys32-msdt.exe
+;
+[22] DirectX 诊断工具
+ , 报告有关 DirectX 组件和安装在系统上的驱动程序的详细信息.
+ , 2
+ , @sys32-dxdiag.exe / @sys32-dxdiagn.dll
+;
+[22] HTML 查看器
+ , Windows 安装 HTML 渲染引擎的最低要求.
+ , 2
+ , @sys32-mshta.exe
+;
+[22] 字段映射工具
+ , Team Foundation 字段映射工具(包含32,64位)
+ , 1
+ , Program Files\Common Files\microsoft shared\Team Foundation Server
+;
+[22] 资源监视器
+ , 监视本地计算机上的性能和资源使用情况
+ , 2
+ , @sys32-resmon.exe
+;
+[22] 追踪性能相关的 CMD 工具
+ , 性能日志工具、性能重新记录工具、命令行性能监视器、事件跟踪报告工具、磁盘性能配置工具
+ , 1
+ , @sys32-logman.exe / @sys32-relog.exe / @sys32-typeperf.exe / @sys32-tracerpt.exe / @sys32-diskperf.exe
+;
+[22] 程序包管理器
+ , DISM依赖于此组件
+ , 2
+ , @sys32-pkgmgr.exe
+;
+[22] 打印机迁移
+ , 打印机迁移
+ , 1
+ , @sys32-PrintBrmUi.exe
+;
+[22] 音量合成器
+ , 控制设备及应用程序的音量.
+ , 1
+ , @sys32-SndVol.exe
+;
+
+
+
+[23] Windows Management Instrumentation Tools
+ , 测试工具、管理控制台
+ , 2
+ , @sys32-wbem\wbemtest.exe / @sys32-WmiMgmt.msc
+;
+[23] Windows Management Instrumentation(规范) - 命令行实用程序(32位)
+ , 允许用户使用命令提示符执行 WMI 操作的实用程序.
+ , 2
+ , Windows\syswow64\wbem\WMIC.exe / #WMIC.exe|wow64
+;
+[23] Windows Management Instrumentation(规范) - 命令行实用程序(64位)
+ , 允许用户使用命令提示符执行 WMI 操作的实用程序.
+ , 2
+ , @sys32-wbem\WMIC.exe
+;
+[23] Windows Management Instrumentation(规范) - 核心(32位)
+ , 提供共同的界面和对象模式以便访问有关操作系统、设备、应用程序和服务的管理信息. 注意, 如果移除此组件, 会导致大多数Windows 的软件功能不能正常运行.
+ , 3
+ , Windows\Syswow64\wbem
+;
+[23] Windows Management Instrumentation(规范) - 核心(64位)
+ , 提供共同的界面和对象模式以便访问有关操作系统、设备、应用程序和服务的管理信息. 注意, 如果移除此组件, 会导致大多数Windows 的软件功能不能正常运行.
+ , 3
+ , Windows\System32\wbem
+;
+
+
+
+[24] 云通知
+ , 云通知
+ , 1
+ , @sys-CloudNotifications.exe
+;
+[24] Microsoft 云服务
+ , 
+ , 2
+ , @sys-CloudDomainJoinAUG.dll / @sys-CloudDomainJoinDataModelServer.dll / @sys-CloudExperienceHost.dll / @sys-CloudExperienceHostBroker.dll / @sys-CloudExperienceHostBroker.exe / @sys-CloudExperienceHostCommon.dll / @sys-CloudExperienceHostUser.dll / @sys-CloudRestoreLauncher.dll / @sys-aadcloudap.dll / @sys-zh-cn\aadcloudap.dll.mui / @sys-cldapi.dll / @sys-cloudAP.dll / @sys-cloudidsvc.dll / @sys-cxcredprov.dll
+;
+[24] 输入云存储
+ , Windows输入云存储任务处理程序
+ , 1
+ , @sys-InputCloudStore.dll
+;
+[24] 同步中心
+ , 无
+ , 1
+ , @sys-SyncCenter.dll / @sys-SyncController.dll / @sys-SyncHost.exe / @sys-SyncHostps.dll / @sys-SyncInfrastructure.dll / @sys-SyncInfrastructureps.dll / @sys-SyncProxy.dll / @sys-SyncRes.dll / @sys-SyncSettings.dll / @sys-Syncreg.dll
+;
+[24] 远程访问服务客户端工具
+ , 
+ , 1
+ , @sys-rasdial.exe / @sys-rasphone.exe
+;
+
+
+
+[25] Microsoft 账户
+ , 可用于账户登录, OOBE需要此功能
+ , 3
+ , Windows\System32\config\SOFTWARE{83cefcd8-a10c-11ed-b360-92636b11382a}.TM.blf / Windows\System32\config\SOFTWARE{83cefcd8-a10c-11ed-b360-92636b11382a}.TMContainer00000000000000000001.regtrans-ms / @sys-WWAHost.exe / @sys-MicrosoftAccountCloudAP.dll
+;
+[25] 错误报告程序
+ , 当Windows系统遇到错误或异常情况时, 会自动收集相关信息并生成错误报告
+ , 1
+ , @sys-DWWIN.EXE
+;
+[25] Windows Shell行为与外观
+ , 用于定义Windows Shell的设置和功能(用户界面和桌面环境). 如开始菜单、任务栏和桌面图标等. 该清单文件可能包括自定义Aero用户界面的指令, 不建议移除.
+ , 2
+ , Windows\WindowsShell.Manifest
+;
+[25] 远程桌面
+ , 微软远程桌面
+ , 1
+ , @sys-setup\tssysprep.dll / @sys-mstsc.exe / Windows\SystemResources\mstsc.exe.mun / @sys-RpcRtRemote.dll / @sys-RpcNs4.dll / @sys-wtsapi32.dll
+;
+[25] Windows更新安装记录
+ , 使用Windows Upadte安装更新后保存的记录
+ , 2
+ , Windows\SoftwareDistribution\DataStore
+;
+
+
+
+[26] 人体输入设备
+ , 触控板,触摸屏等
+ , 2
+ , Windows\INF\BthOob.inf / Windows\INF\buttonconverter.inf / Windows\INF\c_hidclass.inf / Windows\INF\fidohid.inf / Windows\INF\heat.inf / Windows\INF\hiddigi.inf / Windows\INF\hidi2c.inf / Windows\INF\hidinterrupt.inf / Windows\INF\hidserv.inf / Windows\INF\hidspi_km.inf / Windows\INF\hidvhf.inf / Windows\INF\input.inf / Windows\INF\mtconfig.inf / Windows\INF\xinputhid.inf / Windows\System32\drivers\MTConfig.sys / Windows\System32\drivers\buttonconverter.sys / Windows\System32\drivers\hidi2c.sys / Windows\System32\drivers\hidinterrupt.sys / Windows\System32\drivers\hidspi.sys / Windows\System32\drivers\wacompen.sys / Windows\System32\drivers\xinputhid.sys / Program Files (x86)\Common Files\Microsoft Shared\Ink\tiptsf.dll / Program Files\Common Files\microsoft shared\ink\tiptsf.dll / Program Files (x86)\Common Files\Microsoft Shared\Ink\zh-CN\TipTsf.dll.mui / Program Files\Common Files\microsoft shared\ink\zh-CN\TipTsf.dll.mui
+;
+[26] 智能卡
+ , 移除后系统将无法识别智能卡设备
+ , 2
+ , windows\inf\c_smartcard.inf / windows\inf\c_smartcardfilter.inf / windows\inf\c_smartcardreader.inf / windows\system32\SmartCardBackgroundPolicy.dll / windows\system32\SmartcardCredentialProvider.dll / windows\system32\SmartCardSimulator.dll / windows\system32\zh-cn\SmartcardCredentialProvider.dll.mui / windows\syswow64\SmartcardCredentialProvider.dll / windows\system32\WinSCard.dll
+;
+[26] 蓝牙
+ , 移除后系统将无法识别蓝牙设备
+ , 2
+ , @sys-BthAvctpSvc.dll / @sys-BthAvrcp.dll / @sys-BthAvrcpAppSvc.dll / @sys-BthMtpContextHandler.dll / @sys-BthRadioMedia.dll / @sys-BthTelemetry.dll / @sys-BthpanContextHandler.dll / @sys-BlbEvents.dll / @sys-BluetoothApis.dll / @sys-BluetoothDesktopHandlers.dll / @sys-BTAGService.dll / @sys-Microsoft.Bluetooth.UserService.dll / @sys-Microsoft.Bluetooth.Audio.dll / @sys-Microsoft.Bluetooth.Proxy.dll / @sys-Microsoft.Bluetooth.Service.dll / @sys-bthci.dll / @sys-bthpanapi.dll / @sys-bthprops.cpl / @sys-bthserv.dll / @sys-bthudtask.exe / @sys-btpanui.dll / @sys-dafBth.dll / @sys-fdBth.dll / @sys-fdBthProxy.dll
+;
+[26] RamOS 磁盘控制器
+ , 内存磁盘
+ , 1
+ , Windows\INF\ramdisk.inf / Windows\INF\ramdisk.PNF / Windows\WinSxS\amd64_ramdisk.inf_* / Windows\WinSxS\amd64_ramdisk.inf.resources_* / Windows\System32\DriverStore\FileRepository\ramdisk.inf_*
+;
+[26] 设备阶段
+ , Device Stage 是一个新的 Windows 平台，可让设备制造商提供与设备的特定品牌、功能和内容相匹配的丰富用户体验。(详见https://learn.microsoft.com/zh-cn/windows-hardware/drivers/print/what-is-device-stage-)
+ , 2
+ , @sys-Dxpserver.exe / @sys-DXP.dll / @sys-dxpps.dll / @sys-DXPTaskRingtone.dll / @sys-DxpTaskSync.dll
+;
+
+
+[30] 安装日志
+ , 暂不全面
+ , 0
+ , windows\DtcInstall.log
+;
+[30] 基线缓存
+ , 无
+ , 1
+ , Windows\installer
+;
+[30] 系统缓存
+ , 系统缓存文件以及日志等.
+ , 0
+ , @sys-logfiles / windows\temp
+;
+[30] Windows日志
+ , 其中可能包括运行日志, 错误日志等
+ , 0
+ , windows\logs / ProgramData\USOShared\Logs / Windows\Performance\WinSAT\DataStore\
+;
+
+[30] Windows SDK安装源
+ , 缓存
+ , 1
+ , programdata\package cache
+;
+[30] 驱动缓存文件
+ , 第三方启动缓存
+ , 1
+ , Windows\System32\DriverStore\temp
+;
+[30] Inte驱动临时解压目录
+ , 未知
+ , 0
+ , inte
+;
+[30] Dism日志
+ , Dism运行日志
+ , 0
+ , windows\logs\dism
+;
+[30] 系统安装残留
+ , 系统安装残留? 该命名暂不确定, 无法查证.
+ , 4
+ , windows\CbsTemp
+;
+[30] 调试模块日志
+ , 系统调试文件夹, 用来存放系统运行过程中调试模块的日志文件, 以便管理员根据这些日志文件来发现计算机所存在的问题.
+ , 0
+ , Windows\debug
+;
+[30] 系统日志信息
+ , 系统日志信息文件夹, 如磁盘扫描错误信息, 是系统自动生成的, 系统测试之后, 测试记录文件也会自动存放在这个文件夹下. 可以删除, 但不建议, 因为这样反而降低系统速度.
+ , 1
+ , PerfLogs
+;
+[30] 离线网页
+ , 离线网页
+ , 4
+ , Windows\Offline Web Pages
+;
+[30] 系统更新安装文件
+ , 无
+ , 4
+ , Windows\SoftwareDistribution\Download
+;
+[30] 杂文件
+ , 包含缓存, 日志等(懒得分类的一些缓存文件之类)
+ , 0
+ , windows\digitallocker / Windows\skb / Windows\rescache / Windows\schcache / Windows\appcompat / Windows\appreadiness / Windows\LanguageOverlayCache / Windows\LiveKernelReports / windows\ModemLogs / windows\Performance / windows\RemotePackages / windows\rescache / windows\tapi / windows\tasks / windows\tracing
+;
+[30] 错误报告
+ , 当Windows系统遇到错误或异常情况时, 会自动收集相关信息并生成错误报告
+ , 0
+ , ProgramData\Microsoft\Windows\WER\ReportArchive / ProgramData\Microsoft\Windows\WER\ReportQueue / Windows\LiveKernelReports\WATCHDOG
+;
+[/组件列表]
+
+
+
+[Winsxs极限精简]
+Catalogs
+FileMaps
+InstallTemp
+Manifests
+amd64_microsoft-windows-s..cingstack.resources
+amd64_microsoft-windows-servicingstack
+amd64_microsoft.windows.c..-controls.resources
+amd64_microsoft.windows.common-controls
+amd64_microsoft.windows.gdiplus
+
+[Winsxs深度精简]
+Catalogs
+FileMaps
+InstallTemp
+Manifests
+amd64_microsoft-windows-cmisetup
+amd64_microsoft-windows-cmi
+amd64_microsoft-windows-com-dtc-runtime
+amd64_microsoft-windows-d..t-services-unattend
+amd64_microsoft-windows-deltacompressionengine
+amd64_microsoft-windows-deltapackageexpander
+amd64_microsoft-windows-drvstore
+amd64_microsoft-windows-dynamicvolumemanager
+amd64_microsoft-windows-help-datalayer
+amd64_microsoft-windows-i..ntrolpanel.appxmain
+amd64_microsoft-windows-m..acementmanifests-ds
+amd64_microsoft-windows-m..cementmanifests-com
+amd64_microsoft-windows-m..cementmanifests-net
+amd64_microsoft-windows-m..elmanifests-drivers
+amd64_microsoft-windows-m..elmanifests-enduser
+amd64_microsoft-windows-m..elmanifests-inetsrv
+amd64_microsoft-windows-m..elmanifests-onecore
+amd64_microsoft-windows-m..elmanifests-pcshell
+amd64_microsoft-windows-m..elmanifests-termsrv
+amd64_microsoft-windows-m..elmanifests-windows
+amd64_microsoft-windows-m..ementmanifests-base
+amd64_microsoft-windows-m..entmanifests-avcore
+amd64_microsoft-windows-m..evelmanifests-minio
+amd64_microsoft-windows-m..lmanifests-inetcore
+amd64_microsoft-windows-m..manifests-minkernel
+amd64_microsoft-windows-m..manifests-minkernel
+amd64_microsoft-windows-m..manifests-printscan
+amd64_microsoft-windows-m..manifests-printscan
+amd64_microsoft-windows-m..mentmanifests-admin
+amd64_microsoft-windows-m..mentmanifests-minio
+amd64_microsoft-windows-m..mentmanifests-shell
+amd64_microsoft-windows-m..nlevelmanifests-com
+amd64_microsoft-windows-m..ntmanifests-drivers
+amd64_microsoft-windows-m..ntmanifests-enduser
+amd64_microsoft-windows-m..ntmanifests-inetsrv
+amd64_microsoft-windows-m..ntmanifests-onecore
+amd64_microsoft-windows-m..ntmanifests-termsrv
+amd64_microsoft-windows-m..ntmanifests-windows
+amd64_microsoft-windows-m..tion-isolationlayer
+amd64_microsoft-windows-m..wnlevelmanifests-ds
+amd64_microsoft-windows-msxml60
+amd64_microsoft-windows-naturallanguage6-base
+amd64_microsoft-windows-oobe-firstlogonanimexe
+amd64_microsoft-windows-oobe-firstlogonanim
+amd64_microsoft-windows-p..ncetoolscommandline
+amd64_microsoft-windows-packagemanager
+amd64_microsoft-windows-pantherengine
+amd64_microsoft-windows-s..cingstack.resources
+amd64_microsoft-windows-s..stack-msg.resources
+amd64_microsoft-windows-servicingstack
+amd64_microsoft-windows-servicingstack
+amd64_microsoft-windows-setup-unattend
+amd64_microsoft-windows-shell32
+amd64_microsoft-windows-smi-engine
+amd64_microsoft-windows-store-licensemanager
+amd64_microsoft-windows-t..platform-comruntime
+amd64_microsoft-windows-uiribbon.resources
+amd64_microsoft-windows-uiribbon
+amd64_microsoft-windows-wmi-core-fastprox-dll
+amd64_microsoft-windows-wmi-core-repdrvfs-dll
+amd64_microsoft-windows-wmi-core-wbemcomn-dll
+amd64_microsoft-windows-wmi-core-wbemcore-dll
+amd64_microsoft-windows-wmi-core
+amd64_microsoft-windows-wmi-mofinstaller
+amd64_microsoft-windows-xmllite
+amd64_microsoft.vc80.crt
+amd64_microsoft.vc90.crt
+amd64_microsoft.windows.c..-controls.resources
+amd64_microsoft.windows.common-controls
+amd64_microsoft.windows.gdiplus.systemcopy
+amd64_microsoft.windows.gdiplus
+amd64_microsoft.windows.i..utomation.proxystub
+amd64_microsoft.windows.isolationautomation
+amd64_system.runtime.seri..ion.formatters.soap
+wow64_microsoft-windows-cmisetup
+wow64_microsoft-windows-cmi
+wow64_microsoft-windows-deltacompressionengine
+wow64_microsoft-windows-deltapackageexpander
+wow64_microsoft-windows-drvstore
+wow64_microsoft-windows-help-datalayer
+wow64_microsoft-windows-m..tion-isolationlayer
+wow64_microsoft-windows-msxml60
+wow64_microsoft-windows-naturallanguage6-base
+wow64_microsoft-windows-p..ncetoolscommandline
+wow64_microsoft-windows-shell32
+wow64_microsoft-windows-store-licensemanager
+wow64_microsoft-windows-t..platform-comruntime
+wow64_microsoft-windows-uiribbon.resources
+wow64_microsoft-windows-uiribbon
+wow64_microsoft-windows-wmi-core-fastprox-dll
+wow64_microsoft-windows-wmi-core-repdrvfs-dll
+wow64_microsoft-windows-wmi-core-wbemcomn-dll
+wow64_microsoft-windows-wmi-core-wbemcore-dll
+wow64_microsoft-windows-wmi-core
+wow64_microsoft-windows-xmllite
+wow64_microsoft.windows.gdiplus.systemcopy
+x86_microsoft-windows-packagemanager
+x86_microsoft-windows-pantherengine
+x86_microsoft-windows-servicingstack
+x86_microsoft-windows-servicingstack
+x86_microsoft.vc80.crt
+x86_microsoft.vc90.crt
+x86_microsoft.windows.c..-controls.resources
+x86_microsoft.windows.common-controls
+x86_microsoft.windows.gdiplus
+x86_microsoft.windows.i..utomation.proxystub
+x86_microsoft.windows.isolationautomation
+
+[组件关联列表]
+!组件池极限精简 , !组件池深度精简 , 被取代的组件 , 组件池缓存文件
+
+[暂缓组件]
+[组件] 组件池深度精简 , Winsxs组件池(能用系统) , 3 , windows\winsxs
+[组件] 组件池极限精简 , Winsxs组件池(能进系统) , 3 , windows\winsxs
+[字体] 字体极限精简 , 保留最少的字体, 保证系统以及软件字样正常显示. , 4 , Windows\Fonts\StaticCache.dat / Windows\Fonts\bahnschrift.ttf / Windows\Fonts\cambria.ttc / Windows\Fonts\cambriab.ttf / Windows\Fonts\cambriai.ttf / Windows\Fonts\cambriaz.ttf / Windows\Fonts\candara.ttf / Windows\Fonts\candarab.ttf / Windows\Fonts\candarai.ttf / Windows\Fonts\candaral.ttf / Windows\Fonts\candarali.ttf / Windows\Fonts\candaraz.ttf / Windows\Fonts\constan.ttf / Windows\Fonts\constanb.ttf / Windows\Fonts\constani.ttf / Windows\Fonts\constanz.ttf / Windows\Fonts\ebrima.ttf / Windows\Fonts\ebrimabd.ttf / Windows\Fonts\gabriola.ttf / Windows\Fonts\gadugi.ttf / Windows\Fonts\gadugib.ttf / Windows\Fonts\georgia.ttf / Windows\Fonts\georgiab.ttf / Windows\Fonts\georgiai.ttf / Windows\Fonts\georgiaz.ttf / Windows\Fonts\himalaya.ttf / Windows\Fonts\javatext.ttf / Windows\Fonts\leelauib.ttf / Windows\Fonts\leelawui.ttf / Windows\Fonts\leeluisl.ttf / Windows\Fonts\malgun.ttf / Windows\Fonts\malgunbd.ttf / Windows\Fonts\malgunsl.ttf / Windows\Fonts\mingliub.ttc / Windows\Fonts\mmrtext.ttf / Windows\Fonts\mmrtextb.ttf / Windows\Fonts\monbaiti.ttf / Windows\Fonts\msgothic.ttc / Windows\Fonts\msjh.ttc / Windows\Fonts\msjhbd.ttc / Windows\Fonts\msjhl.ttc / Windows\Fonts\msyh.ttc / Windows\Fonts\msyhbd.ttc / Windows\Fonts\msyhl.ttc / Windows\Fonts\msyi.ttf / Windows\Fonts\mvboli.ttf / Windows\Fonts\nirmala.ttf / Windows\Fonts\nirmalab.ttf / Windows\Fonts\nirmalas.ttf / Windows\Fonts\ntailu.ttf / Windows\Fonts\ntailub.ttf / Windows\Fonts\pala.ttf / Windows\Fonts\palab.ttf / Windows\Fonts\palabi.ttf / Windows\Fonts\palai.ttf / Windows\Fonts\phagspa.ttf / Windows\Fonts\phagspab.ttf / Windows\Fonts\simsun.ttc / Windows\Fonts\simsunb.ttf / Windows\Fonts\sitka.ttc / Windows\Fonts\sitkab.ttc / Windows\Fonts\sitkai.ttc / Windows\Fonts\sitkaz.ttc / Windows\Fonts\taile.ttf / Windows\Fonts\taileb.ttf / Windows\Fonts\yugothb.ttc / Windows\Fonts\yugothl.ttc / Windows\Fonts\yugothm.ttc / Windows\Fonts\yugothr.ttc / Windows\Fonts\mingliu.ttc / Windows\Fonts\yumindb.ttf / Windows\Fonts\yumin.ttf / Windows\Fonts\yugothib.ttf / Windows\Fonts\yugothic.ttf / Windows\Fonts\yugothil.ttf / Windows\Fonts\batang.ttc / Windows\Fonts\simkai.ttf / Windows\Fonts\meiryob.ttc / Windows\Fonts\meiryo.ttc / Windows\Fonts\simfang.ttf / Windows\Fonts\msmincho.ttc / Windows\Fonts\gulim.ttc / Windows\Fonts\simhei.ttf / Windows\Fonts\yuminl.ttf / Windows\Fonts\kaiu.ttf / Windows\Fonts\msyh.ttf / Windows\Fonts\msjh.ttf / Windows\Fonts\msyhbd.ttf / Windows\Fonts\msjhbd.ttf
+[组件] KMS激活 , KMS激活, VOL 批量授权, Windows 跟 Office 的 KMS 激活需要这个功能.
+[5] 键盘布局 , 包含所有语言的键盘布局. , 2 , Windows\System32\KBD*.dll
+[4] 入门 , 在1507之前叫提示 , 1 , Windows\System32\OobeFldr.dll / Windows\SysWOW64\OobeFldr.dll / Windows\System32\zh-cn\OobeFldr.dll.mui / Windows\SysWOW64\zh-cn\OobeFldr.dll.mui
+[8] 基于虚拟化的安全性(VBS) , 确保代码完整的仅 UEFl-功能, 部分内存受虚拟化安全保护, 当Credential Guard启用时, 本地安全认证子系统服务(Local Security Authority Process)在隔离用户模式下运行敏感代码, 以免数据收到恶意破坏. , 1 , Windows\System32\lsass.exe
